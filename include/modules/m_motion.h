@@ -58,10 +58,10 @@
  */
 #define MOTION_DEFAULT_CONFIG     \
 {                                 \
-    .pedo_interval_ms    = 0,  \
-    .temp_interval_ms    = 0,   \
-    .compass_interval_ms = 0,   \
-    .motion_freq_hz      = 25,    \
+    .pedo_interval_ms    = 1000,  \
+    .temp_interval_ms    = 500,   \
+    .compass_interval_ms = 500,   \
+    .motion_freq_hz      = 10,    \
     .wake_on_motion      = 1      \
 }
 

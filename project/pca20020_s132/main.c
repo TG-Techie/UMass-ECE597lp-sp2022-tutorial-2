@@ -369,7 +369,7 @@ int main(void)
         
         if (!NRF_LOG_PROCESS()) // Process logs
         { 
-            power_manage();
+            // power_manage();
         }
     }
 }
