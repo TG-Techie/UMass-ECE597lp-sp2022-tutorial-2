@@ -1,0 +1,23 @@
+{
+    "C_Cpp.default.configurationProvider": "nrf-connect",
+    "files.associations": {
+        "SConstruct": "python",
+        "cmath": "c",
+        "complex": "c",
+        "random": "c",
+        "*.tcc": "c",
+        "numbers": "c"
+    },
+    "C_Cpp.formatting": "Disabled",
+    "python.languageServer": "Pylance",
+    "python.linting.pylintEnabled": false,
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingModuleSource": "none"
+    },
+    "python.analysis.extraPaths": [
+        "",
+        "/Users/jonahym/.vscode/extensions/joedevivo.vscode-circuitpython-0.1.17-darwin-x64/stubs",
+        "/Users/jonahym/Library/Application Support/Code/User/globalStorage/joedevivo.vscode-circuitpython/bundle/20220416/adafruit-circuitpython-bundle-py-20220416/lib"
+    ],
+    "circuitpython.board.version": null
+}

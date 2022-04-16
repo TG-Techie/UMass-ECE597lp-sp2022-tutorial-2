@@ -1,0 +1,26 @@
+{
+  "autorun": false,
+  "terminals": [
+    {
+      "name": "NRF Make Clean",
+      "description": "Flash the new program",
+      "cwd": "project/pca20020_s132/armgcc/",
+      "focus": true,
+      "command": "make clean && exit"
+    },
+    {
+      "name": "NRF Flash Debug Firmware",
+      "description": "Flash the new program",
+      "cwd": "project/pca20020_s132/armgcc/",
+      "focus": true,
+      "command": "make flash_debug && exit"
+    },
+    {
+      "name": "NRF Setup",
+      "description": "Erase and unlock the NRF then flash the ble softdevice required for nrf sdk",
+      "cwd": "project/pca20020_s132/armgcc/",
+      "focus": true,
+      "command": "nrfjprog --recover && make clean && make clean && make && make flash_sd && exit"
+    }
+  ]
+}

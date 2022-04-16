@@ -1,0 +1,34 @@
+{
+  "commands": [
+    {
+      "command": "commands.refresh",
+      "text": "$(sync)",
+      "tooltip": "Refresh commands",
+      "color": "#FFCC00"
+    },
+    {
+      "text": "$(sign-out) flash debug",
+      "command": "terminals.runTerminalByName",
+      "arguments": [
+        "NRF Flash Debug Firmware"
+      ],
+      "tooltip": "make and flash the debug firmware"
+    },
+    {
+      "text": "$(broom) clean",
+      "command": "terminals.runTerminalByName",
+      "arguments": [
+        "NRF Make Clean"
+      ],
+      "tooltip": "clean the build folder"
+    }
+    // {
+    //   "text": "(plot)",
+    //   "command": "terminals.runTerminalByName",
+    //   "arguments": [
+    //     "Plot Data Pipeline Stages"
+    //   ],
+    //   "tooltip": "plot collected sensor data"
+    // }
+  ]
+}
