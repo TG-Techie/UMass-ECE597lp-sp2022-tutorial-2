@@ -11555,7 +11555,7 @@ RAM              0x00000000200042a0 0x000000000000bd60 xrw
 Linker script and memory map
 
 
-.text           0x000000000001f000    0x42f7c
+.text           0x000000000001f000    0x42f6c
  *(.isr_vector)
  .isr_vector    0x000000000001f000      0x200 ./_debug/gcc_startup_nrf52.o
                 0x000000000001f000                __isr_vector
@@ -14551,673 +14551,674 @@ Linker script and memory map
  .text.motion_on_ble_evt
                 0x00000000000448b0       0x48 ./_debug/m_motion.o
  .text.drv_motion_evt_handler
-                0x00000000000448f8      0x714 ./_debug/m_motion.o
+                0x00000000000448f8      0x708 ./_debug/m_motion.o
  .text.m_motion_sleep_prepare
-                0x000000000004500c       0x1c ./_debug/m_motion.o
-                0x000000000004500c                m_motion_sleep_prepare
+                0x0000000000045000       0x1c ./_debug/m_motion.o
+                0x0000000000045000                m_motion_sleep_prepare
  .text.m_motion_init
-                0x0000000000045028       0x98 ./_debug/m_motion.o
-                0x0000000000045028                m_motion_init
+                0x000000000004501c       0x98 ./_debug/m_motion.o
+                0x000000000004501c                m_motion_init
+ *fill*         0x00000000000450b4        0x4 
  .text.process_accel_data
-                0x00000000000450c0      0x2cc ./_debug/m_motion.o
-                0x00000000000450c0                process_accel_data
+                0x00000000000450b8      0x2cc ./_debug/m_motion.o
+                0x00000000000450b8                process_accel_data
  .text.motion_fds_evt_handler
-                0x000000000004538c       0xbc ./_debug/m_motion_flash.o
+                0x0000000000045384       0xbc ./_debug/m_motion_flash.o
  .text.m_motion_flash_config_store
-                0x0000000000045448       0x8c ./_debug/m_motion_flash.o
-                0x0000000000045448                m_motion_flash_config_store
+                0x0000000000045440       0x8c ./_debug/m_motion_flash.o
+                0x0000000000045440                m_motion_flash_config_store
  .text.m_motion_flash_config_load
-                0x00000000000454d4       0xd0 ./_debug/m_motion_flash.o
-                0x00000000000454d4                m_motion_flash_config_load
+                0x00000000000454cc       0xd0 ./_debug/m_motion_flash.o
+                0x00000000000454cc                m_motion_flash_config_load
  .text.m_motion_flash_init
-                0x00000000000455a4      0x158 ./_debug/m_motion_flash.o
-                0x00000000000455a4                m_motion_flash_init
+                0x000000000004559c      0x158 ./_debug/m_motion_flash.o
+                0x000000000004559c                m_motion_flash_init
  .text.drv_speaker_evt_handler
-                0x00000000000456fc       0x70 ./_debug/m_sound.o
+                0x00000000000456f4       0x70 ./_debug/m_sound.o
  .text.drv_mic_data_handler
-                0x000000000004576c       0x58 ./_debug/m_sound.o
+                0x0000000000045764       0x58 ./_debug/m_sound.o
  .text.ble_tss_evt_handler
-                0x00000000000457c4      0x1a0 ./_debug/m_sound.o
+                0x00000000000457bc      0x1a0 ./_debug/m_sound.o
  .text.sound_service_init
-                0x0000000000045964       0x70 ./_debug/m_sound.o
+                0x000000000004595c       0x70 ./_debug/m_sound.o
  .text.sound_on_ble_evt
-                0x00000000000459d4       0x44 ./_debug/m_sound.o
+                0x00000000000459cc       0x44 ./_debug/m_sound.o
  .text.m_sound_init
-                0x0000000000045a18       0x74 ./_debug/m_sound.o
-                0x0000000000045a18                m_sound_init
+                0x0000000000045a10       0x74 ./_debug/m_sound.o
+                0x0000000000045a10                m_sound_init
  .text.nrf_gpio_pin_port_decode
-                0x0000000000045a8c       0x18 ./_debug/m_ui.o
+                0x0000000000045a84       0x18 ./_debug/m_ui.o
  .text.nrf_gpio_cfg
-                0x0000000000045aa4       0x54 ./_debug/m_ui.o
+                0x0000000000045a9c       0x54 ./_debug/m_ui.o
  .text.nrf_gpio_cfg_output
-                0x0000000000045af8       0x24 ./_debug/m_ui.o
+                0x0000000000045af0       0x24 ./_debug/m_ui.o
  .text.nrf_gpio_pin_set
-                0x0000000000045b1c       0x2a ./_debug/m_ui.o
+                0x0000000000045b14       0x2a ./_debug/m_ui.o
  .text.nrf_gpio_pin_clear
-                0x0000000000045b46       0x2a ./_debug/m_ui.o
+                0x0000000000045b3e       0x2a ./_debug/m_ui.o
  .text.nrf_gpio_port_out_set
-                0x0000000000045b70       0x1e ./_debug/m_ui.o
+                0x0000000000045b68       0x1e ./_debug/m_ui.o
  .text.nrf_gpio_port_out_clear
-                0x0000000000045b8e       0x1e ./_debug/m_ui.o
+                0x0000000000045b86       0x1e ./_debug/m_ui.o
  .text.rgb_to_color_mix
-                0x0000000000045bac       0x4e ./_debug/m_ui.o
- *fill*         0x0000000000045bfa        0x2 
- .text.led_set  0x0000000000045bfc      0x294 ./_debug/m_ui.o
+                0x0000000000045ba4       0x4e ./_debug/m_ui.o
+ *fill*         0x0000000000045bf2        0x2 
+ .text.led_set  0x0000000000045bf4      0x294 ./_debug/m_ui.o
  .text.thingy_ui_on_ble_evt
-                0x0000000000045e90       0x9c ./_debug/m_ui.o
+                0x0000000000045e88       0x9c ./_debug/m_ui.o
  .text.ble_uis_led_write_handler
-                0x0000000000045f2c       0x58 ./_debug/m_ui.o
+                0x0000000000045f24       0x58 ./_debug/m_ui.o
  .text.ble_uis_pin_write_handler
-                0x0000000000045f84       0x94 ./_debug/m_ui.o
+                0x0000000000045f7c       0x94 ./_debug/m_ui.o
  .text.thingy_ui_service_init
-                0x0000000000046018       0xac ./_debug/m_ui.o
+                0x0000000000046010       0xac ./_debug/m_ui.o
  .text.button_evt_handler
-                0x00000000000460c4       0x60 ./_debug/m_ui.o
+                0x00000000000460bc       0x60 ./_debug/m_ui.o
  .text.m_ui_led_set_event
-                0x0000000000046124       0xb8 ./_debug/m_ui.o
-                0x0000000000046124                m_ui_led_set_event
+                0x000000000004611c       0xb8 ./_debug/m_ui.o
+                0x000000000004611c                m_ui_led_set_event
  .text.button_init
-                0x00000000000461dc       0x88 ./_debug/m_ui.o
+                0x00000000000461d4       0x88 ./_debug/m_ui.o
  .text.m_ui_init
-                0x0000000000046264       0xe8 ./_debug/m_ui.o
-                0x0000000000046264                m_ui_init
+                0x000000000004625c       0xe8 ./_debug/m_ui.o
+                0x000000000004625c                m_ui_init
  .text.ui_fds_evt_handler
-                0x000000000004634c       0xf0 ./_debug/m_ui_flash.o
+                0x0000000000046344       0xf0 ./_debug/m_ui_flash.o
  .text.m_ui_flash_config_store
-                0x000000000004643c       0x98 ./_debug/m_ui_flash.o
-                0x000000000004643c                m_ui_flash_config_store
+                0x0000000000046434       0x98 ./_debug/m_ui_flash.o
+                0x0000000000046434                m_ui_flash_config_store
  .text.m_ui_flash_config_load
-                0x00000000000464d4       0xdc ./_debug/m_ui_flash.o
-                0x00000000000464d4                m_ui_flash_config_load
+                0x00000000000464cc       0xdc ./_debug/m_ui_flash.o
+                0x00000000000464cc                m_ui_flash_config_load
  .text.m_ui_flash_init
-                0x00000000000465b0      0x164 ./_debug/m_ui_flash.o
-                0x00000000000465b0                m_ui_flash_init
+                0x00000000000465a8      0x164 ./_debug/m_ui_flash.o
+                0x00000000000465a8                m_ui_flash_init
  .text.NVIC_EnableIRQ
-                0x0000000000046714       0x34 ./_debug/advertiser_beacon_timeslot.o
+                0x000000000004670c       0x34 ./_debug/advertiser_beacon_timeslot.o
  .text.sd_radio_session_open
-                0x0000000000046748        0x8 ./_debug/advertiser_beacon_timeslot.o
+                0x0000000000046740        0x8 ./_debug/advertiser_beacon_timeslot.o
  .text.sd_radio_session_close
-                0x0000000000046750        0x8 ./_debug/advertiser_beacon_timeslot.o
+                0x0000000000046748        0x8 ./_debug/advertiser_beacon_timeslot.o
  .text.sd_radio_request
-                0x0000000000046758        0x8 ./_debug/advertiser_beacon_timeslot.o
+                0x0000000000046750        0x8 ./_debug/advertiser_beacon_timeslot.o
  .text.m_configure_next_event
-                0x0000000000046760       0x44 ./_debug/advertiser_beacon_timeslot.o
-                0x0000000000046760                m_configure_next_event
+                0x0000000000046758       0x44 ./_debug/advertiser_beacon_timeslot.o
+                0x0000000000046758                m_configure_next_event
  .text.m_request_earliest
-                0x00000000000467a4       0x48 ./_debug/advertiser_beacon_timeslot.o
-                0x00000000000467a4                m_request_earliest
+                0x000000000004679c       0x48 ./_debug/advertiser_beacon_timeslot.o
+                0x000000000004679c                m_request_earliest
  .text.m_get_adv_packet
-                0x00000000000467ec      0x168 ./_debug/advertiser_beacon_timeslot.o
+                0x00000000000467e4      0x168 ./_debug/advertiser_beacon_timeslot.o
  .text.m_set_adv_ch
-                0x0000000000046954       0x5c ./_debug/advertiser_beacon_timeslot.o
+                0x000000000004694c       0x5c ./_debug/advertiser_beacon_timeslot.o
  .text.m_configure_radio
-                0x00000000000469b0       0xa4 ./_debug/advertiser_beacon_timeslot.o
+                0x00000000000469a8       0xa4 ./_debug/advertiser_beacon_timeslot.o
  .text.m_handle_start
-                0x0000000000046a54       0x38 ./_debug/advertiser_beacon_timeslot.o
-                0x0000000000046a54                m_handle_start
+                0x0000000000046a4c       0x38 ./_debug/advertiser_beacon_timeslot.o
+                0x0000000000046a4c                m_handle_start
  .text.m_handle_radio_disabled
-                0x0000000000046a8c       0x70 ./_debug/advertiser_beacon_timeslot.o
-                0x0000000000046a8c                m_handle_radio_disabled
+                0x0000000000046a84       0x70 ./_debug/advertiser_beacon_timeslot.o
+                0x0000000000046a84                m_handle_radio_disabled
  .text.m_timeslot_callback
-                0x0000000000046afc       0xd0 ./_debug/advertiser_beacon_timeslot.o
+                0x0000000000046af4       0xd0 ./_debug/advertiser_beacon_timeslot.o
  .text.app_beacon_on_sys_evt
-                0x0000000000046bcc       0xa4 ./_debug/advertiser_beacon_timeslot.o
-                0x0000000000046bcc                app_beacon_on_sys_evt
+                0x0000000000046bc4       0xa4 ./_debug/advertiser_beacon_timeslot.o
+                0x0000000000046bc4                app_beacon_on_sys_evt
  .text.app_beacon_init
-                0x0000000000046c70       0x5c ./_debug/advertiser_beacon_timeslot.o
-                0x0000000000046c70                app_beacon_init
+                0x0000000000046c68       0x5c ./_debug/advertiser_beacon_timeslot.o
+                0x0000000000046c68                app_beacon_init
  .text.app_beacon_start
-                0x0000000000046ccc       0x7c ./_debug/advertiser_beacon_timeslot.o
-                0x0000000000046ccc                app_beacon_start
+                0x0000000000046cc4       0x7c ./_debug/advertiser_beacon_timeslot.o
+                0x0000000000046cc4                app_beacon_start
  .text.app_beacon_stop
-                0x0000000000046d48       0x20 ./_debug/advertiser_beacon_timeslot.o
-                0x0000000000046d48                app_beacon_stop
+                0x0000000000046d40       0x20 ./_debug/advertiser_beacon_timeslot.o
+                0x0000000000046d40                app_beacon_stop
  .text.fs_evt_handler
-                0x0000000000046d68       0x68 ./_debug/nrf_dfu_flash_buttonless.o
+                0x0000000000046d60       0x68 ./_debug/nrf_dfu_flash_buttonless.o
  .text.sd_softdevice_is_enabled
-                0x0000000000046dd0        0x8 ./_debug/support_func.o
+                0x0000000000046dc8        0x8 ./_debug/support_func.o
  .text.sd_ble_gap_addr_get
-                0x0000000000046dd8        0x8 ./_debug/support_func.o
+                0x0000000000046dd0        0x8 ./_debug/support_func.o
  .text.nrf_delay_us
-                0x0000000000046de0       0xa8 ./_debug/support_func.o
+                0x0000000000046dd8       0xa8 ./_debug/support_func.o
  .text.nrf_delay_ms
-                0x0000000000046e88       0x20 ./_debug/support_func.o
+                0x0000000000046e80       0x20 ./_debug/support_func.o
  .text.nrf_gpio_pin_port_decode
-                0x0000000000046ea8       0x18 ./_debug/support_func.o
+                0x0000000000046ea0       0x18 ./_debug/support_func.o
  .text.nrf_gpio_cfg
-                0x0000000000046ec0       0x54 ./_debug/support_func.o
+                0x0000000000046eb8       0x54 ./_debug/support_func.o
  .text.nrf_gpio_cfg_output
-                0x0000000000046f14       0x24 ./_debug/support_func.o
+                0x0000000000046f0c       0x24 ./_debug/support_func.o
  .text.nrf_gpio_pin_set
-                0x0000000000046f38       0x2a ./_debug/support_func.o
+                0x0000000000046f30       0x2a ./_debug/support_func.o
  .text.nrf_gpio_pin_clear
-                0x0000000000046f62       0x2a ./_debug/support_func.o
+                0x0000000000046f5a       0x2a ./_debug/support_func.o
  .text.nrf_gpio_port_out_set
-                0x0000000000046f8c       0x1e ./_debug/support_func.o
+                0x0000000000046f84       0x1e ./_debug/support_func.o
  .text.nrf_gpio_port_out_clear
-                0x0000000000046faa       0x1e ./_debug/support_func.o
+                0x0000000000046fa2       0x1e ./_debug/support_func.o
  .text.support_func_ble_mac_address_get
-                0x0000000000046fc8      0x10c ./_debug/support_func.o
-                0x0000000000046fc8                support_func_ble_mac_address_get
+                0x0000000000046fc0      0x10c ./_debug/support_func.o
+                0x0000000000046fc0                support_func_ble_mac_address_get
  .text.support_func_sys_halt_debug_enabled
-                0x00000000000470d4       0x24 ./_debug/support_func.o
-                0x00000000000470d4                support_func_sys_halt_debug_enabled
+                0x00000000000470cc       0x24 ./_debug/support_func.o
+                0x00000000000470cc                support_func_sys_halt_debug_enabled
  .text.ioext_pin_cfg
-                0x00000000000470f8       0x5c ./_debug/support_func.o
+                0x00000000000470f0       0x5c ./_debug/support_func.o
  .text.nrf_pin_cfg
-                0x0000000000047154       0x84 ./_debug/support_func.o
+                0x000000000004714c       0x84 ./_debug/support_func.o
  .text.configure_default_ioext_gpio_state
-                0x00000000000471d8      0x16c ./_debug/support_func.o
+                0x00000000000471d0      0x16c ./_debug/support_func.o
  .text.configure_default_nrf_gpio_state
-                0x0000000000047344       0x9c ./_debug/support_func.o
+                0x000000000004733c       0x9c ./_debug/support_func.o
  .text.configure_default_nrf_gpio_state_reversed
-                0x00000000000473e0       0xa0 ./_debug/support_func.o
+                0x00000000000473d8       0xa0 ./_debug/support_func.o
  .text.support_func_configure_io_startup
-                0x0000000000047480       0xa4 ./_debug/support_func.o
-                0x0000000000047480                support_func_configure_io_startup
+                0x0000000000047478       0xa4 ./_debug/support_func.o
+                0x0000000000047478                support_func_configure_io_startup
  .text.support_func_configure_io_shutdown
-                0x0000000000047524       0x54 ./_debug/support_func.o
-                0x0000000000047524                support_func_configure_io_shutdown
+                0x000000000004751c       0x54 ./_debug/support_func.o
+                0x000000000004751c                support_func_configure_io_shutdown
  .text.sx150x_led_drv_calc_fade_supp
-                0x0000000000047578       0x50 ./_debug/sx150x_led_drv_calc.o
-                0x0000000000047578                sx150x_led_drv_calc_fade_supp
+                0x0000000000047570       0x50 ./_debug/sx150x_led_drv_calc.o
+                0x0000000000047570                sx150x_led_drv_calc_fade_supp
  .text.diff_above_limit
-                0x00000000000475c8       0x74 ./_debug/sx150x_led_drv_calc.o
+                0x00000000000475c0       0x74 ./_debug/sx150x_led_drv_calc.o
  .text.optimal_time_settings_onoff_calculate
-                0x000000000004763c      0x384 ./_debug/sx150x_led_drv_calc.o
+                0x0000000000047634      0x384 ./_debug/sx150x_led_drv_calc.o
  .text.optimal_time_settings_risefall_calculate
-                0x00000000000479c0      0x464 ./_debug/sx150x_led_drv_calc.o
+                0x00000000000479b8      0x464 ./_debug/sx150x_led_drv_calc.o
  .text.sx150x_led_drv_calc_convert
-                0x0000000000047e24       0xf8 ./_debug/sx150x_led_drv_calc.o
-                0x0000000000047e24                sx150x_led_drv_calc_convert
+                0x0000000000047e1c       0xf8 ./_debug/sx150x_led_drv_calc.o
+                0x0000000000047e1c                sx150x_led_drv_calc_convert
  .text.sx150x_led_drv_calc_init
-                0x0000000000047f1c       0x40 ./_debug/sx150x_led_drv_calc.o
-                0x0000000000047f1c                sx150x_led_drv_calc_init
+                0x0000000000047f14       0x40 ./_debug/sx150x_led_drv_calc.o
+                0x0000000000047f14                sx150x_led_drv_calc_init
  .text.twi_manager_request
-                0x0000000000047f5c       0x7c ./_debug/twi_manager.o
-                0x0000000000047f5c                twi_manager_request
+                0x0000000000047f54       0x7c ./_debug/twi_manager.o
+                0x0000000000047f54                twi_manager_request
  .text.twi_manager_init
-                0x0000000000047fd8       0x2c ./_debug/twi_manager.o
-                0x0000000000047fd8                twi_manager_init
- *fill*         0x0000000000048004        0x4 
- .text          0x0000000000048008      0xd98 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(accel_auto_cal.o)
-                0x0000000000048068                inv_start_in_use_auto_calibration
-                0x0000000000048128                inv_init_accel_maxmin
-                0x0000000000048148                inv_record_good_accel_maxmin
-                0x0000000000048180                inv_get_current_calibrated_accel
-                0x00000000000481c4                inv_sort_order_4_T
-                0x0000000000048268                inv_init_check_sample_balance
-                0x0000000000048284                inv_init_check_sample_balance_parameter
-                0x00000000000482b0                inv_add_accel_block_data
-                0x0000000000048364                inv_add_vector_block_data
-                0x0000000000048418                inv_check_sample_balance
-                0x00000000000485b0                inv_auto_calibrate
-                0x0000000000048cb8                inv_init_in_use_auto_calibration
-                0x0000000000048d50                inv_stop_in_use_auto_calibration
-                0x0000000000048d5c                inv_enable_in_use_auto_calibration
-                0x0000000000048d74                inv_disable_in_use_auto_calibration
-                0x0000000000048d90                inv_get_accel_bias_stage
- .text          0x0000000000048da0     0x2430 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(compass_vec_cal.o)
-                0x0000000000048da0                inv_start_vector_compass_cal
-                0x0000000000048fc8                inv_vector_compass_cal_sensitivity
-                0x0000000000048fd4                inv_cheap_rand
-                0x000000000004900c                inv_cheap_gaussian
-                0x00000000000490d0                inv_combine_compass_data
-                0x0000000000049244                inv_set_terms
-                0x0000000000049550                inv_compute_bias
-                0x0000000000049cf4                inv_center_sum
-                0x000000000004a3fc                inv_get_current_calibrated_compass
-                0x000000000004a454                inv_add_compass_block_data
-                0x000000000004a504                inv_check_sim
-                0x000000000004a670                inv_reset_data_collection
-                0x000000000004af60                inv_process_compass_only_cal
-                0x000000000004b07c                inv_generate_vector_compass_cal
-                0x000000000004b124                inv_stop_vector_compass_cal
-                0x000000000004b130                inv_init_vector_compass_cal
-                0x000000000004b19c                inv_enable_vector_compass_cal
-                0x000000000004b1b4                inv_disable_vector_compass_cal
- .text          0x000000000004b1d0      0xd90 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(fast_no_motion.o)
-                0x000000000004b36c                inv_init_maxmin
-                0x000000000004b404                inv_start_fast_nomot
-                0x000000000004b444                inv_fast_nomot_parameter
-                0x000000000004b450                inv_fast_nomot_parameter_3rd
-                0x000000000004b530                inv_fast_nomot_set_gyro_bias
-                0x000000000004b600                inv_set_fast_nomot_compass_threshold
-                0x000000000004b60c                int_set_fast_nomot_gyro_threshold
-                0x000000000004b618                inv_set_fast_nomot_accel_threshold
-                0x000000000004b624                inv_get_fast_nomot_compass_param
-                0x000000000004b644                inv_get_fast_nomot_accel_param
-                0x000000000004b664                inv_fast_nomot_store_data
-                0x000000000004b704                inv_fast_nomot_store_data_compass
-                0x000000000004b750                inv_fast_nomot_reset_data_compass
-                0x000000000004b77c                inv_fast_nomot_get_time_elaps
-                0x000000000004b788                inv_fast_nomot_parameter_compass
-                0x000000000004b7a0                inv_get_right_shift_by_rounding
-                0x000000000004b820                inv_reset_min_max_gyro_accel_statistics
-                0x000000000004b854                inv_record_max_moment_in_no_motion_gyro
-                0x000000000004b888                inv_record_max_moment_in_no_motion_accel
-                0x000000000004b8bc                inv_record_min_moment_in_motion_gyro
-                0x000000000004b8f0                inv_record_min_moment_in_motion_accel
-                0x000000000004b924                inv_detect_motion_by_gyro_accel
-                0x000000000004ba68                inv_sensor_data_preprocess
-                0x000000000004bb08                inv_generate_fast_nomot
-                0x000000000004be54                inv_set_default_number_of_samples
-                0x000000000004bea4                inv_init_fast_nomot
-                0x000000000004bf0c                inv_stop_fast_nomot
-                0x000000000004bf24                inv_enable_fast_nomot
-                0x000000000004bf3c                inv_disable_fast_nomot
-                0x000000000004bf50                inv_get_fnm_gyro_no_motion_param
-                0x000000000004bf5c                inv_fnm_debug_print
- .text          0x000000000004bf60      0x760 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(fusion_9axis.o)
-                0x000000000004bf60                inv_start_9x_sensor_fusion
-                0x000000000004bf70                inv_filter_correction_angle
-                0x000000000004c160                inv_perform_9x_fusion
-                0x000000000004c57c                inv_process_9x_sensor_fusion_cb
-                0x000000000004c614                inv_init_9x_fusion
-                0x000000000004c650                inv_9x_fusion_set_mag_fb
-                0x000000000004c660                inv_9x_fusion_enable_jitter_reduction
-                0x000000000004c670                inv_9x_fusion_use_timestamps
-                0x000000000004c680                inv_stop_9x_sensor_fusion
-                0x000000000004c68c                inv_enable_9x_sensor_fusion
-                0x000000000004c6b0                inv_disable_9x_sensor_fusion
- .text          0x000000000004c6c0      0x5a0 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(gyro_tc.o)
-                0x000000000004c6c0                inv_start_gyro_tc
-                0x000000000004cb38                inv_init_gyro_ts
-                0x000000000004cb70                inv_set_gtc_max_temp
-                0x000000000004cb80                inv_set_gtc_min_temp
-                0x000000000004cb90                inv_set_gtc_min_diff
-                0x000000000004cba0                inv_get_gyro_ts
-                0x000000000004cbc4                inv_set_gyro_ts
-                0x000000000004cbc8                inv_set_gtc_order
-                0x000000000004cbe0                inv_print_gtc_data
-                0x000000000004cbe4                inv_stop_gyro_tc
-                0x000000000004cbf0                inv_enable_gyro_tc
-                0x000000000004cc30                inv_disable_gyro_tc
- .text          0x000000000004cc60      0x640 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(heading_from_gyro.o)
-                0x000000000004cc60                inv_start_heading_from_gyro
-                0x000000000004cc70                inv_run_heading_from_gyro
-                0x000000000004d224                inv_init_heading_from_gyro
-                0x000000000004d248                inv_stop_heading_from_gyro
-                0x000000000004d254                inv_enable_heading_from_gyro
-                0x000000000004d284                inv_disable_heading_from_gyro
- .text          0x000000000004d2a0      0x680 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(mag_disturb.o)
-                0x000000000004d2a0                inv_start_magnetic_disturbance
-                0x000000000004d2b0                inv_set_magnetic_disturbance
-                0x000000000004d2c8                inv_init_magnetic_disturbance
-                0x000000000004d314                inv_stop_magnetic_disturbance
-                0x000000000004d320                inv_enable_magnetic_disturbance
-                0x000000000004d34c                inv_disable_magnetic_disturbance
-                0x000000000004d364                inv_disable_dip_tracking
-                0x000000000004d374                inv_enable_dip_tracking
-                0x000000000004d384                inv_track_dip_angle
-                0x000000000004d41c                ComputeAngleVelocity
-                0x000000000004d47c                Mag3ofNormalizedLong
-                0x000000000004d4d0                MagDisturbSetDisturbance
-                0x000000000004d550                MagDisturbCheckSettling
-                0x000000000004d5a8                inv_check_magnetic_disturbance
-                0x000000000004d8dc                inv_magnetic_disturbance_process
-                0x000000000004d914                inv_get_magnetic_disturbance_state
- .text          0x000000000004d920      0xa78 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(quaternion_supervisor.o)
-                0x000000000004d9f0                inv_start_quaternion
-                0x000000000004db5c                inv_generate_gyro_quaternion
-                0x000000000004db68                inv_set_quaternion
-                0x000000000004db98                inv_generate_accel_gyro_quaternion
-                0x000000000004e330                inv_stop_quaternion
-                0x000000000004e33c                inv_init_quaternion
-                0x000000000004e360                inv_enable_quaternion
-                0x000000000004e378                inv_disable_quaternion
+                0x0000000000047fd0       0x2c ./_debug/twi_manager.o
+                0x0000000000047fd0                twi_manager_init
+ *fill*         0x0000000000047ffc        0x4 
+ .text          0x0000000000048000      0xd98 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(accel_auto_cal.o)
+                0x0000000000048060                inv_start_in_use_auto_calibration
+                0x0000000000048120                inv_init_accel_maxmin
+                0x0000000000048140                inv_record_good_accel_maxmin
+                0x0000000000048178                inv_get_current_calibrated_accel
+                0x00000000000481bc                inv_sort_order_4_T
+                0x0000000000048260                inv_init_check_sample_balance
+                0x000000000004827c                inv_init_check_sample_balance_parameter
+                0x00000000000482a8                inv_add_accel_block_data
+                0x000000000004835c                inv_add_vector_block_data
+                0x0000000000048410                inv_check_sample_balance
+                0x00000000000485a8                inv_auto_calibrate
+                0x0000000000048cb0                inv_init_in_use_auto_calibration
+                0x0000000000048d48                inv_stop_in_use_auto_calibration
+                0x0000000000048d54                inv_enable_in_use_auto_calibration
+                0x0000000000048d6c                inv_disable_in_use_auto_calibration
+                0x0000000000048d88                inv_get_accel_bias_stage
+ .text          0x0000000000048d98     0x2430 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(compass_vec_cal.o)
+                0x0000000000048d98                inv_start_vector_compass_cal
+                0x0000000000048fc0                inv_vector_compass_cal_sensitivity
+                0x0000000000048fcc                inv_cheap_rand
+                0x0000000000049004                inv_cheap_gaussian
+                0x00000000000490c8                inv_combine_compass_data
+                0x000000000004923c                inv_set_terms
+                0x0000000000049548                inv_compute_bias
+                0x0000000000049cec                inv_center_sum
+                0x000000000004a3f4                inv_get_current_calibrated_compass
+                0x000000000004a44c                inv_add_compass_block_data
+                0x000000000004a4fc                inv_check_sim
+                0x000000000004a668                inv_reset_data_collection
+                0x000000000004af58                inv_process_compass_only_cal
+                0x000000000004b074                inv_generate_vector_compass_cal
+                0x000000000004b11c                inv_stop_vector_compass_cal
+                0x000000000004b128                inv_init_vector_compass_cal
+                0x000000000004b194                inv_enable_vector_compass_cal
+                0x000000000004b1ac                inv_disable_vector_compass_cal
+ .text          0x000000000004b1c8      0xd90 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(fast_no_motion.o)
+                0x000000000004b364                inv_init_maxmin
+                0x000000000004b3fc                inv_start_fast_nomot
+                0x000000000004b43c                inv_fast_nomot_parameter
+                0x000000000004b448                inv_fast_nomot_parameter_3rd
+                0x000000000004b528                inv_fast_nomot_set_gyro_bias
+                0x000000000004b5f8                inv_set_fast_nomot_compass_threshold
+                0x000000000004b604                int_set_fast_nomot_gyro_threshold
+                0x000000000004b610                inv_set_fast_nomot_accel_threshold
+                0x000000000004b61c                inv_get_fast_nomot_compass_param
+                0x000000000004b63c                inv_get_fast_nomot_accel_param
+                0x000000000004b65c                inv_fast_nomot_store_data
+                0x000000000004b6fc                inv_fast_nomot_store_data_compass
+                0x000000000004b748                inv_fast_nomot_reset_data_compass
+                0x000000000004b774                inv_fast_nomot_get_time_elaps
+                0x000000000004b780                inv_fast_nomot_parameter_compass
+                0x000000000004b798                inv_get_right_shift_by_rounding
+                0x000000000004b818                inv_reset_min_max_gyro_accel_statistics
+                0x000000000004b84c                inv_record_max_moment_in_no_motion_gyro
+                0x000000000004b880                inv_record_max_moment_in_no_motion_accel
+                0x000000000004b8b4                inv_record_min_moment_in_motion_gyro
+                0x000000000004b8e8                inv_record_min_moment_in_motion_accel
+                0x000000000004b91c                inv_detect_motion_by_gyro_accel
+                0x000000000004ba60                inv_sensor_data_preprocess
+                0x000000000004bb00                inv_generate_fast_nomot
+                0x000000000004be4c                inv_set_default_number_of_samples
+                0x000000000004be9c                inv_init_fast_nomot
+                0x000000000004bf04                inv_stop_fast_nomot
+                0x000000000004bf1c                inv_enable_fast_nomot
+                0x000000000004bf34                inv_disable_fast_nomot
+                0x000000000004bf48                inv_get_fnm_gyro_no_motion_param
+                0x000000000004bf54                inv_fnm_debug_print
+ .text          0x000000000004bf58      0x760 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(fusion_9axis.o)
+                0x000000000004bf58                inv_start_9x_sensor_fusion
+                0x000000000004bf68                inv_filter_correction_angle
+                0x000000000004c158                inv_perform_9x_fusion
+                0x000000000004c574                inv_process_9x_sensor_fusion_cb
+                0x000000000004c60c                inv_init_9x_fusion
+                0x000000000004c648                inv_9x_fusion_set_mag_fb
+                0x000000000004c658                inv_9x_fusion_enable_jitter_reduction
+                0x000000000004c668                inv_9x_fusion_use_timestamps
+                0x000000000004c678                inv_stop_9x_sensor_fusion
+                0x000000000004c684                inv_enable_9x_sensor_fusion
+                0x000000000004c6a8                inv_disable_9x_sensor_fusion
+ .text          0x000000000004c6b8      0x5a0 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(gyro_tc.o)
+                0x000000000004c6b8                inv_start_gyro_tc
+                0x000000000004cb30                inv_init_gyro_ts
+                0x000000000004cb68                inv_set_gtc_max_temp
+                0x000000000004cb78                inv_set_gtc_min_temp
+                0x000000000004cb88                inv_set_gtc_min_diff
+                0x000000000004cb98                inv_get_gyro_ts
+                0x000000000004cbbc                inv_set_gyro_ts
+                0x000000000004cbc0                inv_set_gtc_order
+                0x000000000004cbd8                inv_print_gtc_data
+                0x000000000004cbdc                inv_stop_gyro_tc
+                0x000000000004cbe8                inv_enable_gyro_tc
+                0x000000000004cc28                inv_disable_gyro_tc
+ .text          0x000000000004cc58      0x640 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(heading_from_gyro.o)
+                0x000000000004cc58                inv_start_heading_from_gyro
+                0x000000000004cc68                inv_run_heading_from_gyro
+                0x000000000004d21c                inv_init_heading_from_gyro
+                0x000000000004d240                inv_stop_heading_from_gyro
+                0x000000000004d24c                inv_enable_heading_from_gyro
+                0x000000000004d27c                inv_disable_heading_from_gyro
+ .text          0x000000000004d298      0x680 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(mag_disturb.o)
+                0x000000000004d298                inv_start_magnetic_disturbance
+                0x000000000004d2a8                inv_set_magnetic_disturbance
+                0x000000000004d2c0                inv_init_magnetic_disturbance
+                0x000000000004d30c                inv_stop_magnetic_disturbance
+                0x000000000004d318                inv_enable_magnetic_disturbance
+                0x000000000004d344                inv_disable_magnetic_disturbance
+                0x000000000004d35c                inv_disable_dip_tracking
+                0x000000000004d36c                inv_enable_dip_tracking
+                0x000000000004d37c                inv_track_dip_angle
+                0x000000000004d414                ComputeAngleVelocity
+                0x000000000004d474                Mag3ofNormalizedLong
+                0x000000000004d4c8                MagDisturbSetDisturbance
+                0x000000000004d548                MagDisturbCheckSettling
+                0x000000000004d5a0                inv_check_magnetic_disturbance
+                0x000000000004d8d4                inv_magnetic_disturbance_process
+                0x000000000004d90c                inv_get_magnetic_disturbance_state
+ .text          0x000000000004d918      0xa78 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(quaternion_supervisor.o)
+                0x000000000004d9e8                inv_start_quaternion
+                0x000000000004db54                inv_generate_gyro_quaternion
+                0x000000000004db60                inv_set_quaternion
+                0x000000000004db90                inv_generate_accel_gyro_quaternion
+                0x000000000004e328                inv_stop_quaternion
+                0x000000000004e334                inv_init_quaternion
+                0x000000000004e358                inv_enable_quaternion
+                0x000000000004e370                inv_disable_quaternion
  .text.arm_sin_f32
-                0x000000000004e398       0x88 ../../../external/sdk13/components/toolchain/cmsis/dsp/GCC/libarm_cortexM4lf_math.a(arm_sin_f32.o)
-                0x000000000004e398                arm_sin_f32
+                0x000000000004e390       0x88 ../../../external/sdk13/components/toolchain/cmsis/dsp/GCC/libarm_cortexM4lf_math.a(arm_sin_f32.o)
+                0x000000000004e390                arm_sin_f32
  .text.halNfcCallback
-                0x000000000004e420      0x2fc ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
+                0x000000000004e418      0x2fc ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
  .text.nfc_t2t_setup
-                0x000000000004e71c       0x74 ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
-                0x000000000004e71c                nfc_t2t_setup
+                0x000000000004e714       0x74 ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
+                0x000000000004e714                nfc_t2t_setup
  .text.nfc_t2t_payload_set
-                0x000000000004e790      0x104 ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
-                0x000000000004e790                nfc_t2t_payload_set
+                0x000000000004e788      0x104 ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
+                0x000000000004e788                nfc_t2t_payload_set
  .text.nfc_t2t_internal_set
-                0x000000000004e894       0x50 ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
-                0x000000000004e894                nfc_t2t_internal_set
+                0x000000000004e88c       0x50 ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
+                0x000000000004e88c                nfc_t2t_internal_set
  .text.nfc_t2t_emulation_start
-                0x000000000004e8e4       0x2c ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
-                0x000000000004e8e4                nfc_t2t_emulation_start
+                0x000000000004e8dc       0x2c ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
+                0x000000000004e8dc                nfc_t2t_emulation_start
  .text.nfc_t2t_emulation_stop
-                0x000000000004e910       0x44 ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
-                0x000000000004e910                nfc_t2t_emulation_stop
- .text.abs      0x000000000004e954        0x8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-abs.o)
-                0x000000000004e954                abs
- .text.exit     0x000000000004e95c       0x28 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-exit.o)
-                0x000000000004e95c                exit
+                0x000000000004e908       0x44 ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
+                0x000000000004e908                nfc_t2t_emulation_stop
+ .text.abs      0x000000000004e94c        0x8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-abs.o)
+                0x000000000004e94c                abs
+ .text.exit     0x000000000004e954       0x28 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-exit.o)
+                0x000000000004e954                exit
  .text.__libc_init_array
-                0x000000000004e984       0x48 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-init.o)
-                0x000000000004e984                __libc_init_array
- .text.memcmp   0x000000000004e9cc       0x1c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memcmp.o)
-                0x000000000004e9cc                memcmp
- .text.memcpy   0x000000000004e9e8       0x1c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memcpy-stub.o)
-                0x000000000004e9e8                memcpy
- .text.memmove  0x000000000004ea04       0x34 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memmove.o)
-                0x000000000004ea04                memmove
- .text.memset   0x000000000004ea38       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
-                0x000000000004ea38                memset
- .text.__cvt    0x000000000004ea48       0xc4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-vfprintf_float.o)
-                0x000000000004ea48                __cvt
+                0x000000000004e97c       0x48 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-init.o)
+                0x000000000004e97c                __libc_init_array
+ .text.memcmp   0x000000000004e9c4       0x1c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memcmp.o)
+                0x000000000004e9c4                memcmp
+ .text.memcpy   0x000000000004e9e0       0x1c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memcpy-stub.o)
+                0x000000000004e9e0                memcpy
+ .text.memmove  0x000000000004e9fc       0x34 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memmove.o)
+                0x000000000004e9fc                memmove
+ .text.memset   0x000000000004ea30       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
+                0x000000000004ea30                memset
+ .text.__cvt    0x000000000004ea40       0xc4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-vfprintf_float.o)
+                0x000000000004ea40                __cvt
  .text.__exponent
-                0x000000000004eb0c       0x7c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-vfprintf_float.o)
-                0x000000000004eb0c                __exponent
+                0x000000000004eb04       0x7c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-vfprintf_float.o)
+                0x000000000004eb04                __exponent
  .text._printf_float
-                0x000000000004eb88      0x46c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-vfprintf_float.o)
-                0x000000000004eb88                _printf_float
+                0x000000000004eb80      0x46c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-vfprintf_float.o)
+                0x000000000004eb80                _printf_float
  .text._printf_common
-                0x000000000004eff4       0xda /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x000000000004eff4                _printf_common
- *fill*         0x000000000004f0ce        0x2 
+                0x000000000004efec       0xda /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x000000000004efec                _printf_common
+ *fill*         0x000000000004f0c6        0x2 
  .text._printf_i
-                0x000000000004f0d0      0x24c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x000000000004f0d0                _printf_i
+                0x000000000004f0c8      0x24c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x000000000004f0c8                _printf_i
  .text.snprintf
-                0x000000000004f31c       0x68 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-snprintf.o)
-                0x000000000004f31c                snprintf
-                0x000000000004f31c                sniprintf
- .text.sprintf  0x000000000004f384       0x40 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-sprintf.o)
-                0x000000000004f384                sprintf
-                0x000000000004f384                siprintf
- .text.strcat   0x000000000004f3c4       0x1e /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-strcat.o)
-                0x000000000004f3c4                strcat
- .text.strcpy   0x000000000004f3e2       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-strcpy.o)
-                0x000000000004f3e2                strcpy
- .text          0x000000000004f3f2       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-strlen.o)
-                0x000000000004f3f2                strlen
- *fill*         0x000000000004f402        0x2 
+                0x000000000004f314       0x68 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-snprintf.o)
+                0x000000000004f314                snprintf
+                0x000000000004f314                sniprintf
+ .text.sprintf  0x000000000004f37c       0x40 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-sprintf.o)
+                0x000000000004f37c                sprintf
+                0x000000000004f37c                siprintf
+ .text.strcat   0x000000000004f3bc       0x1e /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-strcat.o)
+                0x000000000004f3bc                strcat
+ .text.strcpy   0x000000000004f3da       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-strcpy.o)
+                0x000000000004f3da                strcpy
+ .text          0x000000000004f3ea       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-strlen.o)
+                0x000000000004f3ea                strlen
+ *fill*         0x000000000004f3fa        0x2 
  .text._vsprintf_r
-                0x000000000004f404       0x2c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-vsprintf.o)
-                0x000000000004f404                _vsiprintf_r
-                0x000000000004f404                _vsprintf_r
+                0x000000000004f3fc       0x2c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-vsprintf.o)
+                0x000000000004f3fc                _vsiprintf_r
+                0x000000000004f3fc                _vsprintf_r
  .text.vsprintf
-                0x000000000004f430       0x14 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-vsprintf.o)
-                0x000000000004f430                vsprintf
-                0x000000000004f430                vsiprintf
- .text.quorem   0x000000000004f444      0x116 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-dtoa.o)
- *fill*         0x000000000004f55a        0x6 
- .text._dtoa_r  0x000000000004f560      0xbbc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-dtoa.o)
-                0x000000000004f560                _dtoa_r
+                0x000000000004f428       0x14 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-vsprintf.o)
+                0x000000000004f428                vsprintf
+                0x000000000004f428                vsiprintf
+ .text.quorem   0x000000000004f43c      0x116 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-dtoa.o)
+ *fill*         0x000000000004f552        0x6 
+ .text._dtoa_r  0x000000000004f558      0xbbc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-dtoa.o)
+                0x000000000004f558                _dtoa_r
  .text._localeconv_r
-                0x000000000005011c        0x8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-localeconv.o)
-                0x000000000005011c                _localeconv_r
- .text.malloc   0x0000000000050124       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-malloc.o)
-                0x0000000000050124                malloc
- *fill*         0x0000000000050134        0xc 
- .text          0x0000000000050140       0xa0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memchr.o)
-                0x0000000000050140                memchr
- .text._Balloc  0x00000000000501e0       0x68 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
-                0x00000000000501e0                _Balloc
- .text._Bfree   0x0000000000050248       0x2e /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
-                0x0000000000050248                _Bfree
+                0x0000000000050114        0x8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-localeconv.o)
+                0x0000000000050114                _localeconv_r
+ .text.malloc   0x000000000005011c       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-malloc.o)
+                0x000000000005011c                malloc
+ *fill*         0x000000000005012c        0x4 
+ .text          0x0000000000050130       0xa0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memchr.o)
+                0x0000000000050130                memchr
+ .text._Balloc  0x00000000000501d0       0x68 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
+                0x00000000000501d0                _Balloc
+ .text._Bfree   0x0000000000050238       0x2e /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
+                0x0000000000050238                _Bfree
  .text.__multadd
-                0x0000000000050276       0x7c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
-                0x0000000000050276                __multadd
+                0x0000000000050266       0x7c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
+                0x0000000000050266                __multadd
  .text.__hi0bits
-                0x00000000000502f2       0x40 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
-                0x00000000000502f2                __hi0bits
+                0x00000000000502e2       0x40 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
+                0x00000000000502e2                __hi0bits
  .text.__lo0bits
-                0x0000000000050332       0x60 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
-                0x0000000000050332                __lo0bits
- .text.__i2b    0x0000000000050392       0x12 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
-                0x0000000000050392                __i2b
+                0x0000000000050322       0x60 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
+                0x0000000000050322                __lo0bits
+ .text.__i2b    0x0000000000050382       0x12 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
+                0x0000000000050382                __i2b
  .text.__multiply
-                0x00000000000503a4      0x138 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
-                0x00000000000503a4                __multiply
+                0x0000000000050394      0x138 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
+                0x0000000000050394                __multiply
  .text.__pow5mult
-                0x00000000000504dc       0x9c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
-                0x00000000000504dc                __pow5mult
+                0x00000000000504cc       0x9c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
+                0x00000000000504cc                __pow5mult
  .text.__lshift
-                0x0000000000050578       0xbe /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
-                0x0000000000050578                __lshift
- .text.__mcmp   0x0000000000050636       0x38 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
-                0x0000000000050636                __mcmp
- .text.__mdiff  0x000000000005066e       0xec /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
-                0x000000000005066e                __mdiff
- .text.__d2b    0x000000000005075a       0xa0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
-                0x000000000005075a                __d2b
+                0x0000000000050568       0xbe /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
+                0x0000000000050568                __lshift
+ .text.__mcmp   0x0000000000050626       0x38 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
+                0x0000000000050626                __mcmp
+ .text.__mdiff  0x000000000005065e       0xec /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
+                0x000000000005065e                __mdiff
+ .text.__d2b    0x000000000005074a       0xa0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
+                0x000000000005074a                __d2b
  .text._calloc_r
-                0x00000000000507fa       0x1e /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-callocr.o)
-                0x00000000000507fa                _calloc_r
- .text._free_r  0x0000000000050818       0xa0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-freer.o)
-                0x0000000000050818                _free_r
+                0x00000000000507ea       0x1e /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-callocr.o)
+                0x00000000000507ea                _calloc_r
+ .text._free_r  0x0000000000050808       0xa0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-freer.o)
+                0x0000000000050808                _free_r
  .text._malloc_r
-                0x00000000000508b8       0xb4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-mallocr.o)
-                0x00000000000508b8                _malloc_r
+                0x00000000000508a8       0xb4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+                0x00000000000508a8                _malloc_r
  .text.__ssputs_r
-                0x000000000005096c       0xb6 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-svfprintf.o)
-                0x000000000005096c                __ssputs_r
- *fill*         0x0000000000050a22        0x2 
+                0x000000000005095c       0xb6 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x000000000005095c                __ssputs_r
+ *fill*         0x0000000000050a12        0x2 
  .text._svfprintf_r
-                0x0000000000050a24      0x200 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-svfprintf.o)
-                0x0000000000050a24                _svfprintf_r
-                0x0000000000050a24                _svfiprintf_r
- .text._sbrk_r  0x0000000000050c24       0x20 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-sbrkr.o)
-                0x0000000000050c24                _sbrk_r
+                0x0000000000050a14      0x200 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000000050a14                _svfprintf_r
+                0x0000000000050a14                _svfiprintf_r
+ .text._sbrk_r  0x0000000000050c14       0x20 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-sbrkr.o)
+                0x0000000000050c14                _sbrk_r
  .text.__ascii_mbtowc
-                0x0000000000050c44       0x24 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mbtowc_r.o)
-                0x0000000000050c44                __ascii_mbtowc
+                0x0000000000050c34       0x24 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mbtowc_r.o)
+                0x0000000000050c34                __ascii_mbtowc
  .text.__malloc_lock
-                0x0000000000050c68        0xc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mlock.o)
-                0x0000000000050c68                __malloc_lock
+                0x0000000000050c58        0xc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mlock.o)
+                0x0000000000050c58                __malloc_lock
  .text.__malloc_unlock
-                0x0000000000050c74        0xc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mlock.o)
-                0x0000000000050c74                __malloc_unlock
+                0x0000000000050c64        0xc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mlock.o)
+                0x0000000000050c64                __malloc_unlock
  .text._realloc_r
-                0x0000000000050c80       0x4c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-reallocr.o)
-                0x0000000000050c80                _realloc_r
+                0x0000000000050c70       0x4c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-reallocr.o)
+                0x0000000000050c70                _realloc_r
  .text.__ascii_wctomb
-                0x0000000000050ccc       0x1a /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-wctomb_r.o)
-                0x0000000000050ccc                __ascii_wctomb
+                0x0000000000050cbc       0x1a /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-wctomb_r.o)
+                0x0000000000050cbc                __ascii_wctomb
  .text.__retarget_lock_acquire_recursive
-                0x0000000000050ce6        0x2 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
-                0x0000000000050ce6                __retarget_lock_acquire_recursive
+                0x0000000000050cd6        0x2 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+                0x0000000000050cd6                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x0000000000050ce8        0x2 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
-                0x0000000000050ce8                __retarget_lock_release_recursive
+                0x0000000000050cd8        0x2 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+                0x0000000000050cd8                __retarget_lock_release_recursive
  .text._malloc_usable_size_r
-                0x0000000000050cea       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-msizer.o)
-                0x0000000000050cea                _malloc_usable_size_r
- *fill*         0x0000000000050cfa        0x2 
- .text._sbrk    0x0000000000050cfc       0x1c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(sbrk.o)
-                0x0000000000050cfc                _sbrk
- .text._exit    0x0000000000050d18        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
-                0x0000000000050d18                _exit
- *fill*         0x0000000000050d1c        0x4 
- .text.atan     0x0000000000050d20      0x368 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_atan.o)
-                0x0000000000050d20                atan
- .text.cos      0x0000000000051088       0xa8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_cos.o)
-                0x0000000000051088                cos
- .text.fabs     0x0000000000051130       0x14 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_fabs.o)
-                0x0000000000051130                fabs
- *fill*         0x0000000000051144        0x4 
- .text.floor    0x0000000000051148      0x108 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_floor.o)
-                0x0000000000051148                floor
- .text.round    0x0000000000051250       0x9c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_round.o)
-                0x0000000000051250                round
- .text.cosf     0x00000000000512ec       0x90 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-sf_cos.o)
-                0x00000000000512ec                cosf
- .text.sinf     0x000000000005137c       0x94 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-sf_sin.o)
-                0x000000000005137c                sinf
- .text.acos     0x0000000000051410       0xb4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_acos.o)
-                0x0000000000051410                acos
- .text.atan2    0x00000000000514c4        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_atan2.o)
-                0x00000000000514c4                atan2
- .text.log      0x00000000000514c8      0x108 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_log.o)
-                0x00000000000514c8                log
- .text.pow      0x00000000000515d0      0x36c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_pow.o)
-                0x00000000000515d0                pow
- .text.sqrt     0x000000000005193c       0xbc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_sqrt.o)
-                0x000000000005193c                sqrt
- .text.acosf    0x00000000000519f8       0xc0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-wf_acos.o)
-                0x00000000000519f8                acosf
- .text.atan2f   0x0000000000051ab8        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-wf_atan2.o)
-                0x0000000000051ab8                atan2f
- .text.sqrtf    0x0000000000051abc       0xb0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-wf_sqrt.o)
-                0x0000000000051abc                sqrtf
- *fill*         0x0000000000051b6c        0x4 
+                0x0000000000050cda       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-msizer.o)
+                0x0000000000050cda                _malloc_usable_size_r
+ *fill*         0x0000000000050cea        0x2 
+ .text._sbrk    0x0000000000050cec       0x1c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(sbrk.o)
+                0x0000000000050cec                _sbrk
+ .text._exit    0x0000000000050d08        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
+                0x0000000000050d08                _exit
+ *fill*         0x0000000000050d0c        0x4 
+ .text.atan     0x0000000000050d10      0x368 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_atan.o)
+                0x0000000000050d10                atan
+ .text.cos      0x0000000000051078       0xa8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_cos.o)
+                0x0000000000051078                cos
+ .text.fabs     0x0000000000051120       0x14 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_fabs.o)
+                0x0000000000051120                fabs
+ *fill*         0x0000000000051134        0x4 
+ .text.floor    0x0000000000051138      0x108 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_floor.o)
+                0x0000000000051138                floor
+ .text.round    0x0000000000051240       0x9c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_round.o)
+                0x0000000000051240                round
+ .text.cosf     0x00000000000512dc       0x90 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-sf_cos.o)
+                0x00000000000512dc                cosf
+ .text.sinf     0x000000000005136c       0x94 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-sf_sin.o)
+                0x000000000005136c                sinf
+ .text.acos     0x0000000000051400       0xb4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_acos.o)
+                0x0000000000051400                acos
+ .text.atan2    0x00000000000514b4        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_atan2.o)
+                0x00000000000514b4                atan2
+ .text.log      0x00000000000514b8      0x108 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_log.o)
+                0x00000000000514b8                log
+ .text.pow      0x00000000000515c0      0x36c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_pow.o)
+                0x00000000000515c0                pow
+ .text.sqrt     0x000000000005192c       0xbc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_sqrt.o)
+                0x000000000005192c                sqrt
+ .text.acosf    0x00000000000519e8       0xc0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-wf_acos.o)
+                0x00000000000519e8                acosf
+ .text.atan2f   0x0000000000051aa8        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-wf_atan2.o)
+                0x0000000000051aa8                atan2f
+ .text.sqrtf    0x0000000000051aac       0xb0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-wf_sqrt.o)
+                0x0000000000051aac                sqrtf
+ *fill*         0x0000000000051b5c        0x4 
  .text.__ieee754_acos
-                0x0000000000051b70      0x4e0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_acos.o)
-                0x0000000000051b70                __ieee754_acos
+                0x0000000000051b60      0x4e0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_acos.o)
+                0x0000000000051b60                __ieee754_acos
  .text.__ieee754_atan2
-                0x0000000000052050      0x1fc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_atan2.o)
-                0x0000000000052050                __ieee754_atan2
- *fill*         0x000000000005224c        0x4 
+                0x0000000000052040      0x1fc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_atan2.o)
+                0x0000000000052040                __ieee754_atan2
+ *fill*         0x000000000005223c        0x4 
  .text.__ieee754_log
-                0x0000000000052250      0x418 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_log.o)
-                0x0000000000052250                __ieee754_log
+                0x0000000000052240      0x418 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_log.o)
+                0x0000000000052240                __ieee754_log
  .text.__ieee754_pow
-                0x0000000000052668      0xbb4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_pow.o)
-                0x0000000000052668                __ieee754_pow
- *fill*         0x000000000005321c        0x4 
+                0x0000000000052658      0xbb4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_pow.o)
+                0x0000000000052658                __ieee754_pow
+ *fill*         0x000000000005320c        0x4 
  .text.__ieee754_rem_pio2
-                0x0000000000053220      0x46c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_rem_pio2.o)
-                0x0000000000053220                __ieee754_rem_pio2
+                0x0000000000053210      0x46c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_rem_pio2.o)
+                0x0000000000053210                __ieee754_rem_pio2
  .text.__ieee754_sqrt
-                0x000000000005368c      0x188 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_sqrt.o)
-                0x000000000005368c                __ieee754_sqrt
+                0x000000000005367c      0x188 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_sqrt.o)
+                0x000000000005367c                __ieee754_sqrt
  .text.__ieee754_acosf
-                0x0000000000053814      0x240 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-ef_acos.o)
-                0x0000000000053814                __ieee754_acosf
+                0x0000000000053804      0x240 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-ef_acos.o)
+                0x0000000000053804                __ieee754_acosf
  .text.__ieee754_atan2f
-                0x0000000000053a54      0x150 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-ef_atan2.o)
-                0x0000000000053a54                __ieee754_atan2f
+                0x0000000000053a44      0x150 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-ef_atan2.o)
+                0x0000000000053a44                __ieee754_atan2f
  .text.__ieee754_rem_pio2f
-                0x0000000000053ba4      0x294 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-ef_rem_pio2.o)
-                0x0000000000053ba4                __ieee754_rem_pio2f
+                0x0000000000053b94      0x294 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-ef_rem_pio2.o)
+                0x0000000000053b94                __ieee754_rem_pio2f
  .text.__ieee754_sqrtf
-                0x0000000000053e38        0x8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-ef_sqrt.o)
-                0x0000000000053e38                __ieee754_sqrtf
+                0x0000000000053e28        0x8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-ef_sqrt.o)
+                0x0000000000053e28                __ieee754_sqrtf
  .text.__kernel_cos
-                0x0000000000053e40      0x27c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-k_cos.o)
-                0x0000000000053e40                __kernel_cos
- *fill*         0x00000000000540bc        0x4 
+                0x0000000000053e30      0x27c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-k_cos.o)
+                0x0000000000053e30                __kernel_cos
+ *fill*         0x00000000000540ac        0x4 
  .text.__kernel_rem_pio2
-                0x00000000000540c0      0x850 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-k_rem_pio2.o)
-                0x00000000000540c0                __kernel_rem_pio2
+                0x00000000000540b0      0x850 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-k_rem_pio2.o)
+                0x00000000000540b0                __kernel_rem_pio2
  .text.__kernel_sin
-                0x0000000000054910      0x17c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-k_sin.o)
-                0x0000000000054910                __kernel_sin
+                0x0000000000054900      0x17c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-k_sin.o)
+                0x0000000000054900                __kernel_sin
  .text.__kernel_cosf
-                0x0000000000054a8c      0x104 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-kf_cos.o)
-                0x0000000000054a8c                __kernel_cosf
+                0x0000000000054a7c      0x104 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-kf_cos.o)
+                0x0000000000054a7c                __kernel_cosf
  .text.__kernel_rem_pio2f
-                0x0000000000054b90      0x66c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-kf_rem_pio2.o)
-                0x0000000000054b90                __kernel_rem_pio2f
+                0x0000000000054b80      0x66c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-kf_rem_pio2.o)
+                0x0000000000054b80                __kernel_rem_pio2f
  .text.__kernel_sinf
-                0x00000000000551fc       0x90 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-kf_sin.o)
-                0x00000000000551fc                __kernel_sinf
- .text.finite   0x000000000005528c       0x18 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_finite.o)
-                0x000000000005528c                finite
- .text.matherr  0x00000000000552a4        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_matherr.o)
-                0x00000000000552a4                matherr
- .text.nan      0x00000000000552a8       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_nan.o)
-                0x00000000000552a8                nan
- .text.rint     0x00000000000552b8      0x124 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_rint.o)
-                0x00000000000552b8                rint
- *fill*         0x00000000000553dc        0x4 
- .text.scalbn   0x00000000000553e0      0x124 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_scalbn.o)
-                0x00000000000553e0                scalbn
- .text.atanf    0x0000000000055504      0x1b0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-sf_atan.o)
-                0x0000000000055504                atanf
- .text.fabsf    0x00000000000556b4       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-sf_fabs.o)
-                0x00000000000556b4                fabsf
- .text.floorf   0x00000000000556c4       0x8c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-sf_floor.o)
-                0x00000000000556c4                floorf
- .text.scalbnf  0x0000000000055750       0xe4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-sf_scalbn.o)
-                0x0000000000055750                scalbnf
- .text          0x0000000000055834      0x378 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubdf3.o)
-                0x0000000000055834                __aeabi_drsub
-                0x000000000005583c                __subdf3
-                0x000000000005583c                __aeabi_dsub
-                0x0000000000055840                __aeabi_dadd
-                0x0000000000055840                __adddf3
-                0x0000000000055ab8                __aeabi_ui2d
-                0x0000000000055ab8                __floatunsidf
-                0x0000000000055ad8                __floatsidf
-                0x0000000000055ad8                __aeabi_i2d
-                0x0000000000055afc                __extendsfdf2
-                0x0000000000055afc                __aeabi_f2d
-                0x0000000000055b40                __aeabi_ul2d
-                0x0000000000055b40                __floatundidf
-                0x0000000000055b50                __aeabi_l2d
-                0x0000000000055b50                __floatdidf
- .text          0x0000000000055bac      0x424 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_muldivdf3.o)
-                0x0000000000055bac                __aeabi_dmul
-                0x0000000000055bac                __muldf3
-                0x0000000000055e00                __aeabi_ddiv
-                0x0000000000055e00                __divdf3
- .text          0x0000000000055fd0      0x110 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_cmpdf2.o)
-                0x0000000000055fd0                __gedf2
-                0x0000000000055fd0                __gtdf2
-                0x0000000000055fd8                __ledf2
-                0x0000000000055fd8                __ltdf2
-                0x0000000000055fe0                __cmpdf2
-                0x0000000000055fe0                __eqdf2
-                0x0000000000055fe0                __nedf2
-                0x000000000005605c                __aeabi_cdrcmple
-                0x000000000005606c                __aeabi_cdcmple
-                0x000000000005606c                __aeabi_cdcmpeq
-                0x000000000005607c                __aeabi_dcmpeq
-                0x0000000000056090                __aeabi_dcmplt
-                0x00000000000560a4                __aeabi_dcmple
-                0x00000000000560b8                __aeabi_dcmpge
-                0x00000000000560cc                __aeabi_dcmpgt
- .text          0x00000000000560e0       0x2c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_unorddf2.o)
-                0x00000000000560e0                __aeabi_dcmpun
-                0x00000000000560e0                __unorddf2
- .text          0x000000000005610c       0x50 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_fixdfsi.o)
-                0x000000000005610c                __fixdfsi
-                0x000000000005610c                __aeabi_d2iz
- .text          0x000000000005615c       0x40 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_fixunsdfsi.o)
-                0x000000000005615c                __fixunsdfsi
-                0x000000000005615c                __aeabi_d2uiz
- .text          0x000000000005619c       0xa0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_truncdfsf2.o)
-                0x000000000005619c                __aeabi_d2f
-                0x000000000005619c                __truncdfsf2
- .text          0x000000000005623c      0x21c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubsf3.o)
-                0x000000000005623c                __aeabi_frsub
-                0x0000000000056244                __aeabi_fsub
-                0x0000000000056244                __subsf3
-                0x0000000000056248                __aeabi_fadd
-                0x0000000000056248                __addsf3
-                0x00000000000563a8                __aeabi_ui2f
-                0x00000000000563a8                __floatunsisf
-                0x00000000000563b0                __floatsisf
-                0x00000000000563b0                __aeabi_i2f
-                0x00000000000563cc                __aeabi_ul2f
-                0x00000000000563cc                __floatundisf
-                0x00000000000563dc                __aeabi_l2f
-                0x00000000000563dc                __floatdisf
- .text          0x0000000000056458       0xa0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_ldivmod.o)
-                0x0000000000056458                __aeabi_ldivmod
- .text          0x00000000000564f8       0x30 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o)
-                0x00000000000564f8                __aeabi_uldivmod
- .text          0x0000000000056528       0x28 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_fixsfdi.o)
-                0x0000000000056528                __aeabi_f2lz
-                0x0000000000056528                __fixsfdi
- .text          0x0000000000056550       0x40 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_fixunssfdi.o)
-                0x0000000000056550                __aeabi_f2ulz
-                0x0000000000056550                __fixunssfdi
- .text          0x0000000000056590      0x2c4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
-                0x0000000000056590                __udivmoddi4
- .text          0x0000000000056854        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_dvmd_tls.o)
-                0x0000000000056854                __aeabi_ldiv0
-                0x0000000000056854                __aeabi_idiv0
- .text.__errno  0x0000000000056858        0xc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-errno.o)
-                0x0000000000056858                __errno
+                0x00000000000551ec       0x90 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-kf_sin.o)
+                0x00000000000551ec                __kernel_sinf
+ .text.finite   0x000000000005527c       0x18 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_finite.o)
+                0x000000000005527c                finite
+ .text.matherr  0x0000000000055294        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_matherr.o)
+                0x0000000000055294                matherr
+ .text.nan      0x0000000000055298       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_nan.o)
+                0x0000000000055298                nan
+ .text.rint     0x00000000000552a8      0x124 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_rint.o)
+                0x00000000000552a8                rint
+ *fill*         0x00000000000553cc        0x4 
+ .text.scalbn   0x00000000000553d0      0x124 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_scalbn.o)
+                0x00000000000553d0                scalbn
+ .text.atanf    0x00000000000554f4      0x1b0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-sf_atan.o)
+                0x00000000000554f4                atanf
+ .text.fabsf    0x00000000000556a4       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-sf_fabs.o)
+                0x00000000000556a4                fabsf
+ .text.floorf   0x00000000000556b4       0x8c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-sf_floor.o)
+                0x00000000000556b4                floorf
+ .text.scalbnf  0x0000000000055740       0xe4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-sf_scalbn.o)
+                0x0000000000055740                scalbnf
+ .text          0x0000000000055824      0x378 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubdf3.o)
+                0x0000000000055824                __aeabi_drsub
+                0x000000000005582c                __subdf3
+                0x000000000005582c                __aeabi_dsub
+                0x0000000000055830                __aeabi_dadd
+                0x0000000000055830                __adddf3
+                0x0000000000055aa8                __aeabi_ui2d
+                0x0000000000055aa8                __floatunsidf
+                0x0000000000055ac8                __floatsidf
+                0x0000000000055ac8                __aeabi_i2d
+                0x0000000000055aec                __extendsfdf2
+                0x0000000000055aec                __aeabi_f2d
+                0x0000000000055b30                __aeabi_ul2d
+                0x0000000000055b30                __floatundidf
+                0x0000000000055b40                __aeabi_l2d
+                0x0000000000055b40                __floatdidf
+ .text          0x0000000000055b9c      0x424 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_muldivdf3.o)
+                0x0000000000055b9c                __aeabi_dmul
+                0x0000000000055b9c                __muldf3
+                0x0000000000055df0                __aeabi_ddiv
+                0x0000000000055df0                __divdf3
+ .text          0x0000000000055fc0      0x110 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_cmpdf2.o)
+                0x0000000000055fc0                __gedf2
+                0x0000000000055fc0                __gtdf2
+                0x0000000000055fc8                __ledf2
+                0x0000000000055fc8                __ltdf2
+                0x0000000000055fd0                __cmpdf2
+                0x0000000000055fd0                __eqdf2
+                0x0000000000055fd0                __nedf2
+                0x000000000005604c                __aeabi_cdrcmple
+                0x000000000005605c                __aeabi_cdcmple
+                0x000000000005605c                __aeabi_cdcmpeq
+                0x000000000005606c                __aeabi_dcmpeq
+                0x0000000000056080                __aeabi_dcmplt
+                0x0000000000056094                __aeabi_dcmple
+                0x00000000000560a8                __aeabi_dcmpge
+                0x00000000000560bc                __aeabi_dcmpgt
+ .text          0x00000000000560d0       0x2c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_unorddf2.o)
+                0x00000000000560d0                __aeabi_dcmpun
+                0x00000000000560d0                __unorddf2
+ .text          0x00000000000560fc       0x50 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_fixdfsi.o)
+                0x00000000000560fc                __fixdfsi
+                0x00000000000560fc                __aeabi_d2iz
+ .text          0x000000000005614c       0x40 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_fixunsdfsi.o)
+                0x000000000005614c                __fixunsdfsi
+                0x000000000005614c                __aeabi_d2uiz
+ .text          0x000000000005618c       0xa0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_truncdfsf2.o)
+                0x000000000005618c                __aeabi_d2f
+                0x000000000005618c                __truncdfsf2
+ .text          0x000000000005622c      0x21c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubsf3.o)
+                0x000000000005622c                __aeabi_frsub
+                0x0000000000056234                __aeabi_fsub
+                0x0000000000056234                __subsf3
+                0x0000000000056238                __aeabi_fadd
+                0x0000000000056238                __addsf3
+                0x0000000000056398                __aeabi_ui2f
+                0x0000000000056398                __floatunsisf
+                0x00000000000563a0                __floatsisf
+                0x00000000000563a0                __aeabi_i2f
+                0x00000000000563bc                __aeabi_ul2f
+                0x00000000000563bc                __floatundisf
+                0x00000000000563cc                __aeabi_l2f
+                0x00000000000563cc                __floatdisf
+ .text          0x0000000000056448       0xa0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_ldivmod.o)
+                0x0000000000056448                __aeabi_ldivmod
+ .text          0x00000000000564e8       0x30 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o)
+                0x00000000000564e8                __aeabi_uldivmod
+ .text          0x0000000000056518       0x28 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_fixsfdi.o)
+                0x0000000000056518                __aeabi_f2lz
+                0x0000000000056518                __fixsfdi
+ .text          0x0000000000056540       0x40 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_fixunssfdi.o)
+                0x0000000000056540                __aeabi_f2ulz
+                0x0000000000056540                __fixunssfdi
+ .text          0x0000000000056580      0x2c4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+                0x0000000000056580                __udivmoddi4
+ .text          0x0000000000056844        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_dvmd_tls.o)
+                0x0000000000056844                __aeabi_ldiv0
+                0x0000000000056844                __aeabi_idiv0
+ .text.__errno  0x0000000000056848        0xc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-errno.o)
+                0x0000000000056848                __errno
  *(.init)
- .init          0x0000000000056864        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crti.o
-                0x0000000000056864                _init
- .init          0x0000000000056868        0x8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x0000000000056854        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crti.o
+                0x0000000000056854                _init
+ .init          0x0000000000056858        0x8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x0000000000056870        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crti.o
-                0x0000000000056870                _fini
- .fini          0x0000000000056874        0x8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtn.o
+ .fini          0x0000000000056860        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crti.o
+                0x0000000000056860                _fini
+ .fini          0x0000000000056864        0x8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -15229,386 +15230,386 @@ Linker script and memory map
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.rodata*)
- .rodata        0x000000000005687c       0x7c ./_debug/ble_dfu.o
+ .rodata        0x000000000005686c       0x7c ./_debug/ble_dfu.o
  .rodata.m_conn_params_timer_id
-                0x00000000000568f8        0x4 ./_debug/ble_conn_params.o
- .rodata        0x00000000000568fc       0x7f ./_debug/ble_conn_state.o
- *fill*         0x000000000005697b        0x1 
- .rodata        0x000000000005697c       0x7f ./_debug/ble_srv_common.o
- *fill*         0x00000000000569fb        0x1 
+                0x00000000000568e8        0x4 ./_debug/ble_conn_params.o
+ .rodata        0x00000000000568ec       0x7f ./_debug/ble_conn_state.o
+ *fill*         0x000000000005696b        0x1 
+ .rodata        0x000000000005696c       0x7f ./_debug/ble_srv_common.o
+ *fill*         0x00000000000569eb        0x1 
  .rodata.m_rand_pool
-                0x00000000000569fc       0x14 ./_debug/nrf_drv_rng.o
+                0x00000000000569ec       0x14 ./_debug/nrf_drv_rng.o
  .rodata.m_default_config
-                0x0000000000056a10        0x4 ./_debug/nrf_drv_saadc.o
+                0x0000000000056a00        0x4 ./_debug/nrf_drv_saadc.o
  .rodata.m_detection_delay_timer_id
-                0x0000000000056a14        0x4 ./_debug/app_button.o
+                0x0000000000056a04        0x4 ./_debug/app_button.o
  .rodata.m_fds_tl_dirty
-                0x0000000000056a18        0x4 ./_debug/fds.o
+                0x0000000000056a08        0x4 ./_debug/fds.o
  .rodata.page_tag_swap.9263
-                0x0000000000056a1c        0x8 ./_debug/fds.o
+                0x0000000000056a0c        0x8 ./_debug/fds.o
  .rodata.page_tag_data.9267
-                0x0000000000056a24        0x8 ./_debug/fds.o
+                0x0000000000056a14        0x8 ./_debug/fds.o
  .rodata.m_default_color
-                0x0000000000056a2c        0x5 ./_debug/nrf_log_backend_serial.o
- *fill*         0x0000000000056a31        0x3 
- .rodata        0x0000000000056a34        0x7 ./_debug/nrf_log_backend_serial.o
- *fill*         0x0000000000056a3b        0x1 
- .rodata        0x0000000000056a3c      0x308 ./_debug/nrf_strerror.o
+                0x0000000000056a1c        0x5 ./_debug/nrf_log_backend_serial.o
+ *fill*         0x0000000000056a21        0x3 
+ .rodata        0x0000000000056a24        0x7 ./_debug/nrf_log_backend_serial.o
+ *fill*         0x0000000000056a2b        0x1 
+ .rodata        0x0000000000056a2c      0x308 ./_debug/nrf_strerror.o
  .rodata.nrf_strerror_array
-                0x0000000000056d44       0xf0 ./_debug/nrf_strerror.o
- .rodata        0x0000000000056e34       0x7f ./_debug/app_timer.o
- *fill*         0x0000000000056eb3        0x1 
+                0x0000000000056d34       0xf0 ./_debug/nrf_strerror.o
+ .rodata        0x0000000000056e24       0x7f ./_debug/app_timer.o
+ *fill*         0x0000000000056ea3        0x1 
  .rodata.launchapp_type_str
-                0x0000000000056eb4        0xf ./_debug/nfc_launchapp_rec.o
- *fill*         0x0000000000056ec3        0x1 
+                0x0000000000056ea4        0xf ./_debug/nfc_launchapp_rec.o
+ *fill*         0x0000000000056eb3        0x1 
  .rodata.nfc_text_rec_type_field
-                0x0000000000056ec4        0x1 ./_debug/nfc_text_rec.o
-                0x0000000000056ec4                nfc_text_rec_type_field
+                0x0000000000056eb4        0x1 ./_debug/nfc_text_rec.o
+                0x0000000000056eb4                nfc_text_rec_type_field
  .rodata.static_uri_type.7591
-                0x0000000000056ec5        0x1 ./_debug/nfc_uri_rec.o
- *fill*         0x0000000000056ec6        0x2 
- .rodata        0x0000000000056ec8      0x15c ./_debug/softdevice_handler.o
- .rodata        0x0000000000057024       0x17 ./_debug/SEGGER_RTT.o
- *fill*         0x000000000005703b        0x1 
- .rodata        0x000000000005703c       0xa3 ./_debug/softdevice_handler_appsh.o
- *fill*         0x00000000000570df        0x1 
+                0x0000000000056eb5        0x1 ./_debug/nfc_uri_rec.o
+ *fill*         0x0000000000056eb6        0x2 
+ .rodata        0x0000000000056eb8      0x15c ./_debug/softdevice_handler.o
+ .rodata        0x0000000000057014       0x17 ./_debug/SEGGER_RTT.o
+ *fill*         0x000000000005702b        0x1 
+ .rodata        0x000000000005702c       0xa3 ./_debug/softdevice_handler_appsh.o
+ *fill*         0x00000000000570cf        0x1 
  .rodata.indexTable
-                0x00000000000570e0       0x10 ./_debug/dvi_adpcm.o
+                0x00000000000570d0       0x10 ./_debug/dvi_adpcm.o
  .rodata.stepsizeTable
-                0x00000000000570f0       0xb2 ./_debug/dvi_adpcm.o
- *fill*         0x00000000000571a2        0x2 
- .rodata.reg    0x00000000000571a4       0x2a ./_debug/inv_mpu.o
-                0x00000000000571a4                reg
+                0x00000000000570e0       0xb2 ./_debug/dvi_adpcm.o
+ *fill*         0x0000000000057192        0x2 
+ .rodata.reg    0x0000000000057194       0x2a ./_debug/inv_mpu.o
+                0x0000000000057194                reg
+ *fill*         0x00000000000571be        0x2 
+ .rodata.hw     0x00000000000571c0        0xe ./_debug/inv_mpu.o
+                0x00000000000571c0                hw
  *fill*         0x00000000000571ce        0x2 
- .rodata.hw     0x00000000000571d0        0xe ./_debug/inv_mpu.o
-                0x00000000000571d0                hw
- *fill*         0x00000000000571de        0x2 
- .rodata.test   0x00000000000571e0       0x30 ./_debug/inv_mpu.o
-                0x00000000000571e0                test
- .rodata        0x0000000000057210      0x45c ./_debug/inv_mpu.o
+ .rodata.test   0x00000000000571d0       0x30 ./_debug/inv_mpu.o
+                0x00000000000571d0                test
+ .rodata        0x0000000000057200      0x45c ./_debug/inv_mpu.o
  .rodata.dmp_memory
-                0x000000000005766c      0xbf6 ./_debug/inv_mpu_dmp_motion_driver.o
- *fill*         0x0000000000058262        0x2 
- .rodata        0x0000000000058264       0x4b ./_debug/inv_mpu_dmp_motion_driver.o
- *fill*         0x00000000000582af        0x1 
- .rodata        0x00000000000582b0       0x48 ./_debug/data_builder.o
- .rodata        0x00000000000582f8       0x7d ./_debug/mpl.o
- *fill*         0x0000000000058375        0x3 
+                0x000000000005765c      0xbf6 ./_debug/inv_mpu_dmp_motion_driver.o
+ *fill*         0x0000000000058252        0x2 
+ .rodata        0x0000000000058254       0x4b ./_debug/inv_mpu_dmp_motion_driver.o
+ *fill*         0x000000000005829f        0x1 
+ .rodata        0x00000000000582a0       0x48 ./_debug/data_builder.o
+ .rodata        0x00000000000582e8       0x7d ./_debug/mpl.o
+ *fill*         0x0000000000058365        0x3 
  .rodata.__func__.6222
-                0x0000000000058378        0xd ./_debug/mpl.o
- *fill*         0x0000000000058385        0x3 
+                0x0000000000058368        0xd ./_debug/mpl.o
+ *fill*         0x0000000000058375        0x3 
  .rodata.__func__.6230
-                0x0000000000058388        0xe ./_debug/mpl.o
- *fill*         0x0000000000058396        0x2 
- .rodata        0x0000000000058398       0x18 ./_debug/drv_audio_pdm.o
+                0x0000000000058378        0xe ./_debug/mpl.o
+ *fill*         0x0000000000058386        0x2 
+ .rodata        0x0000000000058388       0x18 ./_debug/drv_audio_pdm.o
  .rodata.BATT_MEAS_VOLTAGE_TO_SOC
-                0x00000000000583b0       0x6f ./_debug/main.o
- *fill*         0x000000000005841f        0x1 
+                0x00000000000583a0       0x6f ./_debug/main.o
+ *fill*         0x000000000005840f        0x1 
  .rodata.m_twi_sensors
-                0x0000000000058420        0x8 ./_debug/main.o
- .rodata        0x0000000000058428      0x35d ./_debug/main.o
- *fill*         0x0000000000058785        0x3 
+                0x0000000000058410        0x8 ./_debug/main.o
+ .rodata        0x0000000000058418      0x35d ./_debug/main.o
+ *fill*         0x0000000000058775        0x3 
  .rodata.sx1509_cfg.12398
-                0x0000000000058788        0xc ./_debug/main.o
+                0x0000000000058778        0xc ./_debug/main.o
  .rodata.twi_config.12397
-                0x0000000000058794       0x10 ./_debug/main.o
- .rodata        0x00000000000587a4       0x78 ./_debug/ble_tcs.o
- .rodata        0x000000000005881c       0x78 ./_debug/ble_tes.o
- .rodata        0x0000000000058894       0x78 ./_debug/ble_tms.o
- .rodata        0x000000000005890c       0x78 ./_debug/ble_tss.o
- .rodata        0x0000000000058984       0x78 ./_debug/ble_uis.o
- .rodata        0x00000000000589fc      0x108 ./_debug/drv_acc_lis3dh.o
- .rodata        0x0000000000058b04       0xba ./_debug/drv_bh1745.o
+                0x0000000000058784       0x10 ./_debug/main.o
+ .rodata        0x0000000000058794       0x78 ./_debug/ble_tcs.o
+ .rodata        0x000000000005880c       0x78 ./_debug/ble_tes.o
+ .rodata        0x0000000000058884       0x78 ./_debug/ble_tms.o
+ .rodata        0x00000000000588fc       0x78 ./_debug/ble_tss.o
+ .rodata        0x0000000000058974       0x78 ./_debug/ble_uis.o
+ .rodata        0x00000000000589ec      0x108 ./_debug/drv_acc_lis3dh.o
+ .rodata        0x0000000000058af4       0xba ./_debug/drv_bh1745.o
  .rodata.TX_LENGTH.9713
-                0x0000000000058bbe        0x1 ./_debug/drv_ccs811.o
+                0x0000000000058bae        0x1 ./_debug/drv_ccs811.o
  .rodata.RX_LENGTH.9718
-                0x0000000000058bbf        0x1 ./_debug/drv_ccs811.o
+                0x0000000000058baf        0x1 ./_debug/drv_ccs811.o
  .rodata.TX_LENGTH.9723
-                0x0000000000058bc0        0x1 ./_debug/drv_ccs811.o
- *fill*         0x0000000000058bc1        0x3 
- .rodata        0x0000000000058bc4       0xb6 ./_debug/drv_color.o
- *fill*         0x0000000000058c7a        0x2 
- .rodata        0x0000000000058c7c      0x14d ./_debug/drv_ext_gpio.o
- *fill*         0x0000000000058dc9        0x3 
+                0x0000000000058bb0        0x1 ./_debug/drv_ccs811.o
+ *fill*         0x0000000000058bb1        0x3 
+ .rodata        0x0000000000058bb4       0xb6 ./_debug/drv_color.o
+ *fill*         0x0000000000058c6a        0x2 
+ .rodata        0x0000000000058c6c      0x14d ./_debug/drv_ext_gpio.o
+ *fill*         0x0000000000058db9        0x3 
  .rodata.m_ioext_osc_status_use_matrix
-                0x0000000000058dcc        0x4 ./_debug/drv_ext_light.o
- .rodata        0x0000000000058dd0      0x10e ./_debug/drv_ext_light.o
- *fill*         0x0000000000058ede        0x2 
- .rodata        0x0000000000058ee0      0x107 ./_debug/drv_gas_sensor.o
- *fill*         0x0000000000058fe7        0x1 
- .rodata        0x0000000000058fe8       0xba ./_debug/drv_hts221.o
- *fill*         0x00000000000590a2        0x2 
- .rodata        0x00000000000590a4       0xba ./_debug/drv_humidity.o
- *fill*         0x000000000005915e        0x2 
+                0x0000000000058dbc        0x4 ./_debug/drv_ext_light.o
+ .rodata        0x0000000000058dc0      0x10e ./_debug/drv_ext_light.o
+ *fill*         0x0000000000058ece        0x2 
+ .rodata        0x0000000000058ed0      0x107 ./_debug/drv_gas_sensor.o
+ *fill*         0x0000000000058fd7        0x1 
+ .rodata        0x0000000000058fd8       0xba ./_debug/drv_hts221.o
+ *fill*         0x0000000000059092        0x2 
+ .rodata        0x0000000000059094       0xba ./_debug/drv_humidity.o
+ *fill*         0x000000000005914e        0x2 
  .rodata.cfg.10155
-                0x0000000000059160        0x4 ./_debug/drv_humidity.o
+                0x0000000000059150        0x4 ./_debug/drv_humidity.o
  .rodata.cfg.10164
-                0x0000000000059164        0x4 ./_debug/drv_humidity.o
+                0x0000000000059154        0x4 ./_debug/drv_humidity.o
  .rodata.cfg.10169
-                0x0000000000059168        0x4 ./_debug/drv_humidity.o
+                0x0000000000059158        0x4 ./_debug/drv_humidity.o
  .rodata.HUMID_MAX.10182
-                0x000000000005916c        0x2 ./_debug/drv_humidity.o
+                0x000000000005915c        0x2 ./_debug/drv_humidity.o
  .rodata.HUMID_MIN.10183
-                0x000000000005916e        0x2 ./_debug/drv_humidity.o
- .rodata        0x0000000000059170       0xba ./_debug/drv_lps22hb.o
- *fill*         0x000000000005922a        0x2 
- .rodata        0x000000000005922c      0x14a ./_debug/drv_mic.o
- *fill*         0x0000000000059376        0x2 
- .rodata        0x0000000000059378       0xc6 ./_debug/drv_motion.o
- *fill*         0x000000000005943e        0x2 
+                0x000000000005915e        0x2 ./_debug/drv_humidity.o
+ .rodata        0x0000000000059160       0xba ./_debug/drv_lps22hb.o
+ *fill*         0x000000000005921a        0x2 
+ .rodata        0x000000000005921c      0x14a ./_debug/drv_mic.o
+ *fill*         0x0000000000059366        0x2 
+ .rodata        0x0000000000059368       0xc6 ./_debug/drv_motion.o
+ *fill*         0x000000000005942e        0x2 
  .rodata.COMPASS_BIAS
-                0x0000000000059440        0xc ./_debug/drv_motion.o
+                0x0000000000059430        0xc ./_debug/drv_motion.o
  .rodata.m_temp_timer_id
-                0x000000000005944c        0x4 ./_debug/drv_motion.o
+                0x000000000005943c        0x4 ./_debug/drv_motion.o
  .rodata.m_compass_timer_id
-                0x0000000000059450        0x4 ./_debug/drv_motion.o
+                0x0000000000059440        0x4 ./_debug/drv_motion.o
  .rodata.m_pedo_timer_id
-                0x0000000000059454        0x4 ./_debug/drv_motion.o
+                0x0000000000059444        0x4 ./_debug/drv_motion.o
  .rodata.north.12047
-                0x0000000000059458        0x4 ./_debug/drv_motion.o
- .rodata        0x000000000005945c       0xd7 ./_debug/drv_mpu9250.o
- *fill*         0x0000000000059533        0x1 
- .rodata        0x0000000000059534      0x182 ./_debug/drv_nfc.o
- *fill*         0x00000000000596b6        0x2 
+                0x0000000000059448        0x4 ./_debug/drv_motion.o
+ .rodata        0x000000000005944c       0xd7 ./_debug/drv_mpu9250.o
+ *fill*         0x0000000000059523        0x1 
+ .rodata        0x0000000000059524      0x182 ./_debug/drv_nfc.o
+ *fill*         0x00000000000596a6        0x2 
  .rodata.en_code.7841
-                0x00000000000596b8        0x2 ./_debug/drv_nfc.o
- *fill*         0x00000000000596ba        0x2 
- .rodata        0x00000000000596bc       0xba ./_debug/drv_pressure.o
- *fill*         0x0000000000059776        0x2 
+                0x00000000000596a8        0x2 ./_debug/drv_nfc.o
+ *fill*         0x00000000000596aa        0x2 
+ .rodata        0x00000000000596ac       0xba ./_debug/drv_pressure.o
+ *fill*         0x0000000000059766        0x2 
  .rodata.lps22hb_cfg.10191
-                0x0000000000059778        0xa ./_debug/drv_pressure.o
- *fill*         0x0000000000059782        0x2 
+                0x0000000000059768        0xa ./_debug/drv_pressure.o
+ *fill*         0x0000000000059772        0x2 
  .rodata.sound_0
-                0x0000000000059784     0x1040 ./_debug/drv_speaker.o
+                0x0000000000059774     0x1040 ./_debug/drv_speaker.o
  .rodata.sound_1
-                0x000000000005a7c4      0xcb4 ./_debug/drv_speaker.o
+                0x000000000005a7b4      0xcb4 ./_debug/drv_speaker.o
  .rodata.sound_2
-                0x000000000005b478      0x8c0 ./_debug/drv_speaker.o
+                0x000000000005b468      0x8c0 ./_debug/drv_speaker.o
  .rodata.sound_3
-                0x000000000005bd38      0x618 ./_debug/drv_speaker.o
+                0x000000000005bd28      0x618 ./_debug/drv_speaker.o
  .rodata.sound_4
-                0x000000000005c350      0x602 ./_debug/drv_speaker.o
- *fill*         0x000000000005c952        0x2 
+                0x000000000005c340      0x602 ./_debug/drv_speaker.o
+ *fill*         0x000000000005c942        0x2 
  .rodata.sound_5
-                0x000000000005c954      0x6e0 ./_debug/drv_speaker.o
+                0x000000000005c944      0x6e0 ./_debug/drv_speaker.o
  .rodata.sound_6
-                0x000000000005d034     0x11b5 ./_debug/drv_speaker.o
- *fill*         0x000000000005e1e9        0x3 
+                0x000000000005d024     0x11b5 ./_debug/drv_speaker.o
+ *fill*         0x000000000005e1d9        0x3 
  .rodata.sound_7
-                0x000000000005e1ec      0x5a0 ./_debug/drv_speaker.o
+                0x000000000005e1dc      0x5a0 ./_debug/drv_speaker.o
  .rodata.sound_8
-                0x000000000005e78c      0x2d0 ./_debug/drv_speaker.o
+                0x000000000005e77c      0x2d0 ./_debug/drv_speaker.o
  .rodata.ramp_down_dat
-                0x000000000005ea5c       0x14 ./_debug/drv_speaker.o
- .rodata        0x000000000005ea70       0x74 ./_debug/drv_speaker.o
+                0x000000000005ea4c       0x14 ./_debug/drv_speaker.o
+ .rodata        0x000000000005ea60       0x74 ./_debug/drv_speaker.o
  .rodata.batt_meas_app_timer_id
-                0x000000000005eae4        0x4 ./_debug/m_batt_meas.o
- .rodata        0x000000000005eae8       0xc0 ./_debug/m_batt_meas.o
+                0x000000000005ead4        0x4 ./_debug/m_batt_meas.o
+ .rodata        0x000000000005ead8       0xc0 ./_debug/m_batt_meas.o
  .rodata.m_ble_default_config
-                0x000000000005eba8      0x222 ./_debug/m_ble.o
- *fill*         0x000000000005edca        0x2 
- .rodata        0x000000000005edcc      0x9d8 ./_debug/m_ble.o
- .rodata        0x000000000005f7a4      0x28d ./_debug/m_ble_flash.o
- *fill*         0x000000000005fa31        0x3 
+                0x000000000005eb98      0x222 ./_debug/m_ble.o
+ *fill*         0x000000000005edba        0x2 
+ .rodata        0x000000000005edbc      0x9d8 ./_debug/m_ble.o
+ .rodata        0x000000000005f794      0x28d ./_debug/m_ble_flash.o
+ *fill*         0x000000000005fa21        0x3 
  .rodata.m_default_config
-                0x000000000005fa34        0xc ./_debug/m_environment.o
+                0x000000000005fa24        0xc ./_debug/m_environment.o
  .rodata.m_default_baseline
-                0x000000000005fa40        0x8 ./_debug/m_environment.o
+                0x000000000005fa30        0x8 ./_debug/m_environment.o
  .rodata.temperature_timer_id
-                0x000000000005fa48        0x4 ./_debug/m_environment.o
+                0x000000000005fa38        0x4 ./_debug/m_environment.o
  .rodata.pressure_timer_id
-                0x000000000005fa4c        0x4 ./_debug/m_environment.o
+                0x000000000005fa3c        0x4 ./_debug/m_environment.o
  .rodata.humidity_timer_id
-                0x000000000005fa50        0x4 ./_debug/m_environment.o
+                0x000000000005fa40        0x4 ./_debug/m_environment.o
  .rodata.color_timer_id
-                0x000000000005fa54        0x4 ./_debug/m_environment.o
+                0x000000000005fa44        0x4 ./_debug/m_environment.o
  .rodata.gas_calib_timer_id
-                0x000000000005fa58        0x4 ./_debug/m_environment.o
- .rodata        0x000000000005fa5c      0x175 ./_debug/m_environment.o
- *fill*         0x000000000005fbd1        0x3 
+                0x000000000005fa48        0x4 ./_debug/m_environment.o
+ .rodata        0x000000000005fa4c      0x175 ./_debug/m_environment.o
+ *fill*         0x000000000005fbc1        0x3 
  .rodata.twi_config.12407
-                0x000000000005fbd4       0x10 ./_debug/m_environment.o
+                0x000000000005fbc4       0x10 ./_debug/m_environment.o
  .rodata.twi_config.12413
-                0x000000000005fbe4       0x10 ./_debug/m_environment.o
+                0x000000000005fbd4       0x10 ./_debug/m_environment.o
  .rodata.twi_config.12419
-                0x000000000005fbf4       0x10 ./_debug/m_environment.o
+                0x000000000005fbe4       0x10 ./_debug/m_environment.o
  .rodata.twi_config.12425
-                0x000000000005fc04       0x10 ./_debug/m_environment.o
- .rodata        0x000000000005fc14      0x311 ./_debug/m_environment_flash.o
- *fill*         0x000000000005ff25        0x3 
+                0x000000000005fbf4       0x10 ./_debug/m_environment.o
+ .rodata        0x000000000005fc04      0x311 ./_debug/m_environment_flash.o
+ *fill*         0x000000000005ff15        0x3 
  .rodata.m_default_config
-                0x000000000005ff28        0x9 ./_debug/m_motion.o
- *fill*         0x000000000005ff31        0x3 
- .rodata        0x000000000005ff34      0x167 ./_debug/m_motion.o
+                0x000000000005ff18        0x9 ./_debug/m_motion.o
+ *fill*         0x000000000005ff21        0x3 
+ .rodata        0x000000000005ff24      0x167 ./_debug/m_motion.o
  .rodata.QUAT_ELEMENTS.12482
-                0x000000000006009b        0x1 ./_debug/m_motion.o
+                0x000000000006008b        0x1 ./_debug/m_motion.o
  .rodata.ROT_MAT_ELEMENTS.12497
-                0x000000000006009c        0x1 ./_debug/m_motion.o
+                0x000000000006008c        0x1 ./_debug/m_motion.o
  .rodata.GRAVITY_ELEMENTS.12511
-                0x000000000006009d        0x1 ./_debug/m_motion.o
- *fill*         0x000000000006009e        0x2 
+                0x000000000006008d        0x1 ./_debug/m_motion.o
+ *fill*         0x000000000006008e        0x2 
  .rodata.twi_config_mpu9250.12538
-                0x00000000000600a0       0x10 ./_debug/m_motion.o
+                0x0000000000060090       0x10 ./_debug/m_motion.o
  .rodata.twi_config_lis2dh12.12539
-                0x00000000000600b0       0x10 ./_debug/m_motion.o
- .rodata        0x00000000000600c0      0x151 ./_debug/m_motion_flash.o
- *fill*         0x0000000000060211        0x3 
- .rodata        0x0000000000060214      0x266 ./_debug/m_sound.o
- *fill*         0x000000000006047a        0x2 
+                0x00000000000600a0       0x10 ./_debug/m_motion.o
+ .rodata        0x00000000000600b0      0x151 ./_debug/m_motion_flash.o
+ *fill*         0x0000000000060201        0x3 
+ .rodata        0x0000000000060204      0x266 ./_debug/m_sound.o
+ *fill*         0x000000000006046a        0x2 
  .rodata.m_default_config_connected
+                0x000000000006046c        0x5 ./_debug/m_ui.o
+ *fill*         0x0000000000060471        0x3 
+ .rodata.m_default_config_disconnected
+                0x0000000000060474        0x5 ./_debug/m_ui.o
+ *fill*         0x0000000000060479        0x3 
+ .rodata.m_default_config_error
                 0x000000000006047c        0x5 ./_debug/m_ui.o
  *fill*         0x0000000000060481        0x3 
- .rodata.m_default_config_disconnected
-                0x0000000000060484        0x5 ./_debug/m_ui.o
- *fill*         0x0000000000060489        0x3 
- .rodata.m_default_config_error
-                0x000000000006048c        0x5 ./_debug/m_ui.o
- *fill*         0x0000000000060491        0x3 
- .rodata        0x0000000000060494      0x26c ./_debug/m_ui.o
+ .rodata        0x0000000000060484      0x26c ./_debug/m_ui.o
  .rodata.button_cfg.12117
-                0x0000000000060700        0x8 ./_debug/m_ui.o
+                0x00000000000606f0        0x8 ./_debug/m_ui.o
  .rodata.twi_config.12126
-                0x0000000000060708       0x10 ./_debug/m_ui.o
+                0x00000000000606f8       0x10 ./_debug/m_ui.o
  .rodata.led_conf.12125
-                0x0000000000060718       0x10 ./_debug/m_ui.o
- .rodata        0x0000000000060728      0x255 ./_debug/m_ui_flash.o
- *fill*         0x000000000006097d        0x3 
- .rodata        0x0000000000060980       0xb7 ./_debug/advertiser_beacon_timeslot.o
- *fill*         0x0000000000060a37        0x1 
- .rodata        0x0000000000060a38      0x134 ./_debug/nrf_dfu_flash_buttonless.o
- .rodata        0x0000000000060b6c      0x23b ./_debug/support_func.o
- *fill*         0x0000000000060da7        0x1 
- .rodata        0x0000000000060da8       0x98 ./_debug/twi_manager.o
+                0x0000000000060708       0x10 ./_debug/m_ui.o
+ .rodata        0x0000000000060718      0x255 ./_debug/m_ui_flash.o
+ *fill*         0x000000000006096d        0x3 
+ .rodata        0x0000000000060970       0xb7 ./_debug/advertiser_beacon_timeslot.o
+ *fill*         0x0000000000060a27        0x1 
+ .rodata        0x0000000000060a28      0x134 ./_debug/nrf_dfu_flash_buttonless.o
+ .rodata        0x0000000000060b5c      0x23b ./_debug/support_func.o
+ *fill*         0x0000000000060d97        0x1 
+ .rodata        0x0000000000060d98       0x98 ./_debug/twi_manager.o
  .rodata.str1.4
-                0x0000000000060e40        0x9 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(quaternion_supervisor.o)
+                0x0000000000060e30        0x9 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(quaternion_supervisor.o)
                                           0xc (size before relaxing)
- *fill*         0x0000000000060e49        0x3 
+ *fill*         0x0000000000060e39        0x3 
  .rodata.sinTable_f32
-                0x0000000000060e4c      0x804 ../../../external/sdk13/components/toolchain/cmsis/dsp/GCC/libarm_cortexM4lf_math.a(arm_common_tables.o)
-                0x0000000000060e4c                sinTable_f32
+                0x0000000000060e3c      0x804 ../../../external/sdk13/components/toolchain/cmsis/dsp/GCC/libarm_cortexM4lf_math.a(arm_common_tables.o)
+                0x0000000000060e3c                sinTable_f32
  .rodata.statemachine
-                0x0000000000061650       0x2d ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
- *fill*         0x000000000006167d        0x3 
+                0x0000000000061640       0x2d ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
+ *fill*         0x000000000006166d        0x3 
  .rodata.nfclibDefaultId
-                0x0000000000061680        0xa ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
+                0x0000000000061670        0xa ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
  .rodata._ctype_
-                0x000000000006168a      0x101 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-ctype_.o)
-                0x000000000006168a                _ctype_
- *fill*         0x000000000006178b        0x1 
+                0x000000000006167a      0x101 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-ctype_.o)
+                0x000000000006167a                _ctype_
+ *fill*         0x000000000006177b        0x1 
  .rodata._global_impure_ptr
-                0x000000000006178c        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
-                0x000000000006178c                _global_impure_ptr
+                0x000000000006177c        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+                0x000000000006177c                _global_impure_ptr
  .rodata._printf_float.str1.1
-                0x0000000000061790       0x12 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-vfprintf_float.o)
+                0x0000000000061780       0x12 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-vfprintf_float.o)
  .rodata._printf_i.str1.1
-                0x00000000000617a2       0x22 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000000061792       0x22 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-vfprintf_i.o)
  .rodata._dtoa_r.str1.1
-                0x00000000000617c4        0xd /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-dtoa.o)
+                0x00000000000617b4        0xd /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-dtoa.o)
                                           0xf (size before relaxing)
- *fill*         0x00000000000617d1        0x7 
+ *fill*         0x00000000000617c1        0x7 
  .rodata.__mprec_bigtens
-                0x00000000000617d8       0x28 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
-                0x00000000000617d8                __mprec_bigtens
+                0x00000000000617c8       0x28 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
+                0x00000000000617c8                __mprec_bigtens
  .rodata.__mprec_tens
-                0x0000000000061800       0xc8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
-                0x0000000000061800                __mprec_tens
+                0x00000000000617f0       0xc8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
+                0x00000000000617f0                __mprec_tens
  .rodata.p05.7490
-                0x00000000000618c8        0xc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
+                0x00000000000618b8        0xc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mprec.o)
  .rodata._svfprintf_r.str1.1
-                0x00000000000618d4       0x11 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x00000000000618c4       0x11 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-svfprintf.o)
  .rodata._setlocale_r.str1.1
-                0x00000000000618e5        0x8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-locale.o)
+                0x00000000000618d5        0x8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-locale.o)
                                           0x9 (size before relaxing)
  .rodata.str1.1
-                0x00000000000618ed        0x2 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-locale.o)
- *fill*         0x00000000000618ef        0x1 
+                0x00000000000618dd        0x2 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-locale.o)
+ *fill*         0x00000000000618df        0x1 
  .rodata.atanhi
-                0x00000000000618f0       0x20 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_atan.o)
+                0x00000000000618e0       0x20 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_atan.o)
  .rodata.atanlo
-                0x0000000000061910       0x20 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_atan.o)
+                0x0000000000061900       0x20 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_atan.o)
  .rodata.acos.str1.4
-                0x0000000000061930        0x5 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_acos.o)
+                0x0000000000061920        0x5 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_acos.o)
                                           0x9 (size before relaxing)
- *fill*         0x0000000000061935        0x3 
+ *fill*         0x0000000000061925        0x3 
  .rodata.log.str1.4
-                0x0000000000061938        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_log.o)
+                0x0000000000061928        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_log.o)
                                           0x5 (size before relaxing)
  .rodata.pow.str1.4
-                0x000000000006193c        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_pow.o)
+                0x000000000006192c        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_pow.o)
  .rodata.sqrt.str1.4
-                0x0000000000061940        0x5 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_sqrt.o)
- *fill*         0x0000000000061945        0x3 
+                0x0000000000061930        0x5 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-w_sqrt.o)
+ *fill*         0x0000000000061935        0x3 
  .rodata.acosf.str1.4
-                0x0000000000061948        0x6 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-wf_acos.o)
+                0x0000000000061938        0x6 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-wf_acos.o)
                                           0x9 (size before relaxing)
- *fill*         0x000000000006194e        0x2 
+ *fill*         0x000000000006193e        0x2 
  .rodata.sqrtf.str1.4
-                0x0000000000061950        0x6 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-wf_sqrt.o)
- *fill*         0x0000000000061956        0x2 
+                0x0000000000061940        0x6 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-wf_sqrt.o)
+ *fill*         0x0000000000061946        0x2 
  .rodata.CSWTCH.8
-                0x0000000000061958       0x18 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_atan2.o)
+                0x0000000000061948       0x18 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_atan2.o)
  .rodata.CSWTCH.9
-                0x0000000000061970       0x18 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_atan2.o)
+                0x0000000000061960       0x18 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_atan2.o)
  .rodata.__ieee754_pow.str1.4
-                0x0000000000061988        0x1 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_pow.o)
+                0x0000000000061978        0x1 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_pow.o)
  .rodata.npio2_hw
-                0x0000000000061988       0x80 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_rem_pio2.o)
+                0x0000000000061978       0x80 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_rem_pio2.o)
  .rodata.two_over_pi
-                0x0000000000061a08      0x108 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_rem_pio2.o)
+                0x00000000000619f8      0x108 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-e_rem_pio2.o)
  .rodata.CSWTCH.8
-                0x0000000000061b10        0xc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-ef_atan2.o)
+                0x0000000000061b00        0xc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-ef_atan2.o)
  .rodata.CSWTCH.9
-                0x0000000000061b1c        0xc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-ef_atan2.o)
+                0x0000000000061b0c        0xc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-ef_atan2.o)
  .rodata.npio2_hw
-                0x0000000000061b28       0x80 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-ef_rem_pio2.o)
+                0x0000000000061b18       0x80 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-ef_rem_pio2.o)
  .rodata.two_over_pi
-                0x0000000000061ba8      0x318 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-ef_rem_pio2.o)
- .rodata.PIo2   0x0000000000061ec0       0x40 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-k_rem_pio2.o)
+                0x0000000000061b98      0x318 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-ef_rem_pio2.o)
+ .rodata.PIo2   0x0000000000061eb0       0x40 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-k_rem_pio2.o)
  .rodata.init_jk
-                0x0000000000061f00       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-k_rem_pio2.o)
- .rodata.PIo2   0x0000000000061f10       0x2c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-kf_rem_pio2.o)
+                0x0000000000061ef0       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-k_rem_pio2.o)
+ .rodata.PIo2   0x0000000000061f00       0x2c /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-kf_rem_pio2.o)
  .rodata.init_jk
-                0x0000000000061f3c        0xc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-kf_rem_pio2.o)
- .rodata.TWO52  0x0000000000061f48       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_rint.o)
+                0x0000000000061f2c        0xc /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-kf_rem_pio2.o)
+ .rodata.TWO52  0x0000000000061f38       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-s_rint.o)
  .rodata.atanhi
-                0x0000000000061f58       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-sf_atan.o)
+                0x0000000000061f48       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-sf_atan.o)
  .rodata.atanlo
-                0x0000000000061f68       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-sf_atan.o)
+                0x0000000000061f58       0x10 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(lib_a-sf_atan.o)
  *(.eh_frame*)
- .eh_frame      0x0000000000061f78        0x0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
- .eh_frame      0x0000000000061f78        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtend.o
+ .eh_frame      0x0000000000061f68        0x0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x0000000000061f68        0x4 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtend.o
 
-.glue_7         0x0000000000061f7c        0x0
- .glue_7        0x0000000000061f7c        0x0 linker stubs
+.glue_7         0x0000000000061f6c        0x0
+ .glue_7        0x0000000000061f6c        0x0 linker stubs
 
-.glue_7t        0x0000000000061f7c        0x0
- .glue_7t       0x0000000000061f7c        0x0 linker stubs
+.glue_7t        0x0000000000061f6c        0x0
+ .glue_7t       0x0000000000061f6c        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000061f7c        0x0
- .vfp11_veneer  0x0000000000061f7c        0x0 linker stubs
+.vfp11_veneer   0x0000000000061f6c        0x0
+ .vfp11_veneer  0x0000000000061f6c        0x0 linker stubs
 
-.v4_bx          0x0000000000061f7c        0x0
- .v4_bx         0x0000000000061f7c        0x0 linker stubs
+.v4_bx          0x0000000000061f6c        0x0
+ .v4_bx         0x0000000000061f6c        0x0 linker stubs
 
-.iplt           0x0000000000061f7c        0x0
- .iplt          0x0000000000061f7c        0x0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x0000000000061f6c        0x0
+ .iplt          0x0000000000061f6c        0x0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000000061f7c                __exidx_start = .
+                0x0000000000061f6c                __exidx_start = .
 
-.ARM.exidx      0x0000000000061f7c        0x8
+.ARM.exidx      0x0000000000061f6c        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x0000000000061f7c        0x8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
- .ARM.exidx     0x0000000000061f84        0x0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x0000000000061f6c        0x8 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .ARM.exidx     0x0000000000061f74        0x0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
                                           0x8 (size before relaxing)
-                0x0000000000061f84                __exidx_end = .
-                0x0000000000061f84                __etext = .
+                0x0000000000061f74                __exidx_end = .
+                0x0000000000061f74                __etext = .
 
-.rel.dyn        0x0000000000061f84        0x0
- .rel.iplt      0x0000000000061f84        0x0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x0000000000061f74        0x0
+ .rel.iplt      0x0000000000061f74        0x0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.data           0x00000000200042a0      0x2d4 load address 0x0000000000061f84
+.data           0x00000000200042a0      0x2d4 load address 0x0000000000061f74
                 0x00000000200042a0                __data_start__ = .
  *(vtable)
  *(.data*)
@@ -15819,17 +15820,17 @@ LOAD /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-
 LOAD /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a
 END GROUP
 
-.igot.plt       0x0000000020004574        0x0 load address 0x0000000000062258
+.igot.plt       0x0000000020004574        0x0 load address 0x0000000000062248
  .igot.plt      0x0000000020004574        0x0 /usr/local/Cellar/arm-none-eabi-gcc/9-2019-q4-major/gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.fs_data        0x0000000020004574       0x20 load address 0x0000000000062258
+.fs_data        0x0000000020004574       0x20 load address 0x0000000000062248
                 0x0000000020004574                PROVIDE (__start_fs_data = .)
  *(.fs_data)
  .fs_data       0x0000000020004574       0x10 ./_debug/fds.o
  .fs_data       0x0000000020004584       0x10 ./_debug/nrf_dfu_flash_buttonless.o
                 0x0000000020004594                PROVIDE (__stop_fs_data = .)
 
-.bss            0x0000000020004598     0x4ec0 load address 0x0000000000062280
+.bss            0x0000000020004598     0x4ec0 load address 0x0000000000062270
                 0x0000000020004598                . = ALIGN (0x4)
                 0x0000000020004598                __bss_start__ = .
  *(.bss*)
@@ -16873,7 +16874,7 @@ OUTPUT(_debug/ble_app_thingy_s132_pca20020.out elf32-littlearm)
  .comment       0x0000000000000159       0x70 ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
                                          0x71 (size before relaxing)
 
-.debug_info     0x0000000000000000   0x10646b
+.debug_info     0x0000000000000000   0x10647b
  .debug_info    0x0000000000000000     0x56f0 ./_debug/ble_advertising.o
  .debug_info    0x00000000000056f0     0x45ce ./_debug/ble_bas.o
  .debug_info    0x0000000000009cbe     0x5a7d ./_debug/ble_dfu.o
@@ -16955,27 +16956,27 @@ OUTPUT(_debug/ble_app_thingy_s132_pca20020.out elf32-littlearm)
  .debug_info    0x00000000000c10b5     0x45cc ./_debug/m_ble_flash.o
  .debug_info    0x00000000000c5681     0x6cf4 ./_debug/m_environment.o
  .debug_info    0x00000000000cc375     0x460b ./_debug/m_environment_flash.o
- .debug_info    0x00000000000d0980     0x64ad ./_debug/m_motion.o
- .debug_info    0x00000000000d6e2d     0x43ad ./_debug/m_motion_flash.o
- .debug_info    0x00000000000db1da     0x5534 ./_debug/m_sound.o
- .debug_info    0x00000000000e070e     0x629c ./_debug/m_ui.o
- .debug_info    0x00000000000e69aa     0x446c ./_debug/m_ui_flash.o
- .debug_info    0x00000000000eae16     0x4c15 ./_debug/advertiser_beacon_timeslot.o
- .debug_info    0x00000000000efa2b     0x42b7 ./_debug/nrf_dfu_flash_buttonless.o
- .debug_info    0x00000000000f3ce2     0x4ddc ./_debug/support_func.o
- .debug_info    0x00000000000f8abe      0xeae ./_debug/sx150x_led_drv_calc.o
- .debug_info    0x00000000000f996c     0x1c4e ./_debug/twi_manager.o
- .debug_info    0x00000000000fb5ba     0x1694 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(accel_auto_cal.o)
- .debug_info    0x00000000000fcc4e     0x1a1d ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(compass_vec_cal.o)
- .debug_info    0x00000000000fe66b     0x176f ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(fast_no_motion.o)
- .debug_info    0x00000000000ffdda      0xe9e ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(fusion_9axis.o)
- .debug_info    0x0000000000100c78      0xccb ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(gyro_tc.o)
- .debug_info    0x0000000000101943      0xbcb ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(heading_from_gyro.o)
- .debug_info    0x000000000010250e      0xf6f ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(mag_disturb.o)
- .debug_info    0x000000000010347d     0x11f7 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(quaternion_supervisor.o)
- .debug_info    0x0000000000104674      0x17e ../../../external/sdk13/components/toolchain/cmsis/dsp/GCC/libarm_cortexM4lf_math.a(arm_sin_f32.o)
- .debug_info    0x00000000001047f2      0x99d ../../../external/sdk13/components/toolchain/cmsis/dsp/GCC/libarm_cortexM4lf_math.a(arm_common_tables.o)
- .debug_info    0x000000000010518f     0x12dc ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
+ .debug_info    0x00000000000d0980     0x64bd ./_debug/m_motion.o
+ .debug_info    0x00000000000d6e3d     0x43ad ./_debug/m_motion_flash.o
+ .debug_info    0x00000000000db1ea     0x5534 ./_debug/m_sound.o
+ .debug_info    0x00000000000e071e     0x629c ./_debug/m_ui.o
+ .debug_info    0x00000000000e69ba     0x446c ./_debug/m_ui_flash.o
+ .debug_info    0x00000000000eae26     0x4c15 ./_debug/advertiser_beacon_timeslot.o
+ .debug_info    0x00000000000efa3b     0x42b7 ./_debug/nrf_dfu_flash_buttonless.o
+ .debug_info    0x00000000000f3cf2     0x4ddc ./_debug/support_func.o
+ .debug_info    0x00000000000f8ace      0xeae ./_debug/sx150x_led_drv_calc.o
+ .debug_info    0x00000000000f997c     0x1c4e ./_debug/twi_manager.o
+ .debug_info    0x00000000000fb5ca     0x1694 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(accel_auto_cal.o)
+ .debug_info    0x00000000000fcc5e     0x1a1d ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(compass_vec_cal.o)
+ .debug_info    0x00000000000fe67b     0x176f ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(fast_no_motion.o)
+ .debug_info    0x00000000000ffdea      0xe9e ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(fusion_9axis.o)
+ .debug_info    0x0000000000100c88      0xccb ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(gyro_tc.o)
+ .debug_info    0x0000000000101953      0xbcb ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(heading_from_gyro.o)
+ .debug_info    0x000000000010251e      0xf6f ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(mag_disturb.o)
+ .debug_info    0x000000000010348d     0x11f7 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(quaternion_supervisor.o)
+ .debug_info    0x0000000000104684      0x17e ../../../external/sdk13/components/toolchain/cmsis/dsp/GCC/libarm_cortexM4lf_math.a(arm_sin_f32.o)
+ .debug_info    0x0000000000104802      0x99d ../../../external/sdk13/components/toolchain/cmsis/dsp/GCC/libarm_cortexM4lf_math.a(arm_common_tables.o)
+ .debug_info    0x000000000010519f     0x12dc ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
 
 .debug_abbrev   0x0000000000000000    0x15a31
  .debug_abbrev  0x0000000000000000      0x475 ./_debug/ble_advertising.o
@@ -17390,7 +17391,7 @@ OUTPUT(_debug/ble_app_thingy_s132_pca20020.out elf32-littlearm)
  .debug_ranges  0x000000000000c890       0x10 ../../../external/sdk13/components/toolchain/cmsis/dsp/GCC/libarm_cortexM4lf_math.a(arm_sin_f32.o)
  .debug_ranges  0x000000000000c8a0      0x4e0 ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
 
-.debug_line     0x0000000000000000    0x54d06
+.debug_line     0x0000000000000000    0x54d02
  .debug_line    0x0000000000000000     0x13f1 ./_debug/ble_advertising.o
  .debug_line    0x00000000000013f1      0xce8 ./_debug/ble_bas.o
  .debug_line    0x00000000000020d9     0x1324 ./_debug/ble_dfu.o
@@ -17472,29 +17473,29 @@ OUTPUT(_debug/ble_app_thingy_s132_pca20020.out elf32-littlearm)
  .debug_line    0x00000000000435eb     0x1036 ./_debug/m_ble_flash.o
  .debug_line    0x0000000000044621     0x1d16 ./_debug/m_environment.o
  .debug_line    0x0000000000046337     0x11a9 ./_debug/m_environment_flash.o
- .debug_line    0x00000000000474e0     0x17d0 ./_debug/m_motion.o
- .debug_line    0x0000000000048cb0      0xff5 ./_debug/m_motion_flash.o
- .debug_line    0x0000000000049ca5     0x1204 ./_debug/m_sound.o
- .debug_line    0x000000000004aea9     0x1717 ./_debug/m_ui.o
- .debug_line    0x000000000004c5c0     0x1005 ./_debug/m_ui_flash.o
- .debug_line    0x000000000004d5c5     0x12ce ./_debug/advertiser_beacon_timeslot.o
- .debug_line    0x000000000004e893     0x1162 ./_debug/nrf_dfu_flash_buttonless.o
- .debug_line    0x000000000004f9f5     0x1520 ./_debug/support_func.o
- .debug_line    0x0000000000050f15      0x88e ./_debug/sx150x_led_drv_calc.o
- .debug_line    0x00000000000517a3      0x957 ./_debug/twi_manager.o
- .debug_line    0x00000000000520fa      0x659 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(accel_auto_cal.o)
- .debug_line    0x0000000000052753      0x642 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(compass_vec_cal.o)
- .debug_line    0x0000000000052d95      0x501 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(fast_no_motion.o)
- .debug_line    0x0000000000053296      0x3cf ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(fusion_9axis.o)
- .debug_line    0x0000000000053665      0x2df ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(gyro_tc.o)
- .debug_line    0x0000000000053944      0x287 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(heading_from_gyro.o)
- .debug_line    0x0000000000053bcb      0x394 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(mag_disturb.o)
- .debug_line    0x0000000000053f5f      0x3d2 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(quaternion_supervisor.o)
- .debug_line    0x0000000000054331      0x177 ../../../external/sdk13/components/toolchain/cmsis/dsp/GCC/libarm_cortexM4lf_math.a(arm_sin_f32.o)
- .debug_line    0x00000000000544a8      0x12e ../../../external/sdk13/components/toolchain/cmsis/dsp/GCC/libarm_cortexM4lf_math.a(arm_common_tables.o)
- .debug_line    0x00000000000545d6      0x730 ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
+ .debug_line    0x00000000000474e0     0x17cc ./_debug/m_motion.o
+ .debug_line    0x0000000000048cac      0xff5 ./_debug/m_motion_flash.o
+ .debug_line    0x0000000000049ca1     0x1204 ./_debug/m_sound.o
+ .debug_line    0x000000000004aea5     0x1717 ./_debug/m_ui.o
+ .debug_line    0x000000000004c5bc     0x1005 ./_debug/m_ui_flash.o
+ .debug_line    0x000000000004d5c1     0x12ce ./_debug/advertiser_beacon_timeslot.o
+ .debug_line    0x000000000004e88f     0x1162 ./_debug/nrf_dfu_flash_buttonless.o
+ .debug_line    0x000000000004f9f1     0x1520 ./_debug/support_func.o
+ .debug_line    0x0000000000050f11      0x88e ./_debug/sx150x_led_drv_calc.o
+ .debug_line    0x000000000005179f      0x957 ./_debug/twi_manager.o
+ .debug_line    0x00000000000520f6      0x659 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(accel_auto_cal.o)
+ .debug_line    0x000000000005274f      0x642 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(compass_vec_cal.o)
+ .debug_line    0x0000000000052d91      0x501 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(fast_no_motion.o)
+ .debug_line    0x0000000000053292      0x3cf ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(fusion_9axis.o)
+ .debug_line    0x0000000000053661      0x2df ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(gyro_tc.o)
+ .debug_line    0x0000000000053940      0x287 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(heading_from_gyro.o)
+ .debug_line    0x0000000000053bc7      0x394 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(mag_disturb.o)
+ .debug_line    0x0000000000053f5b      0x3d2 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(quaternion_supervisor.o)
+ .debug_line    0x000000000005432d      0x177 ../../../external/sdk13/components/toolchain/cmsis/dsp/GCC/libarm_cortexM4lf_math.a(arm_sin_f32.o)
+ .debug_line    0x00000000000544a4      0x12e ../../../external/sdk13/components/toolchain/cmsis/dsp/GCC/libarm_cortexM4lf_math.a(arm_common_tables.o)
+ .debug_line    0x00000000000545d2      0x730 ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
 
-.debug_str      0x0000000000000000    0x2395a
+.debug_str      0x0000000000000000    0x23966
  .debug_str     0x0000000000000000     0x4285 ./_debug/ble_advertising.o
                                        0x46ff (size before relaxing)
  .debug_str     0x0000000000004285      0x3f9 ./_debug/ble_bas.o
@@ -17657,47 +17658,47 @@ OUTPUT(_debug/ble_app_thingy_s132_pca20020.out elf32-littlearm)
                                        0x4f31 (size before relaxing)
  .debug_str     0x0000000000018d2c      0x215 ./_debug/m_environment_flash.o
                                        0x36c7 (size before relaxing)
- .debug_str     0x0000000000018f41      0x249 ./_debug/m_motion.o
-                                       0x4bf1 (size before relaxing)
- .debug_str     0x000000000001918a      0x100 ./_debug/m_motion_flash.o
+ .debug_str     0x0000000000018f41      0x255 ./_debug/m_motion.o
+                                       0x4bec (size before relaxing)
+ .debug_str     0x0000000000019196      0x100 ./_debug/m_motion_flash.o
                                        0x3551 (size before relaxing)
- .debug_str     0x000000000001928a       0xf6 ./_debug/m_sound.o
+ .debug_str     0x0000000000019296       0xf6 ./_debug/m_sound.o
                                        0x4385 (size before relaxing)
- .debug_str     0x0000000000019380      0x226 ./_debug/m_ui.o
+ .debug_str     0x000000000001938c      0x226 ./_debug/m_ui.o
                                        0x4c38 (size before relaxing)
- .debug_str     0x00000000000195a6       0xe4 ./_debug/m_ui_flash.o
+ .debug_str     0x00000000000195b2       0xe4 ./_debug/m_ui_flash.o
                                        0x35b2 (size before relaxing)
- .debug_str     0x000000000001968a      0x69b ./_debug/advertiser_beacon_timeslot.o
+ .debug_str     0x0000000000019696      0x69b ./_debug/advertiser_beacon_timeslot.o
                                        0x3c62 (size before relaxing)
- .debug_str     0x0000000000019d25      0x1ee ./_debug/nrf_dfu_flash_buttonless.o
+ .debug_str     0x0000000000019d31      0x1ee ./_debug/nrf_dfu_flash_buttonless.o
                                        0x34f2 (size before relaxing)
- .debug_str     0x0000000000019f13      0x21b ./_debug/support_func.o
+ .debug_str     0x0000000000019f1f      0x21b ./_debug/support_func.o
                                        0x3e38 (size before relaxing)
- .debug_str     0x000000000001a12e      0x2f4 ./_debug/sx150x_led_drv_calc.o
+ .debug_str     0x000000000001a13a      0x2f4 ./_debug/sx150x_led_drv_calc.o
                                         0xbc5 (size before relaxing)
- .debug_str     0x000000000001a422      0x112 ./_debug/twi_manager.o
+ .debug_str     0x000000000001a42e      0x112 ./_debug/twi_manager.o
                                        0x1750 (size before relaxing)
- .debug_str     0x000000000001a534      0x8c0 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(accel_auto_cal.o)
+ .debug_str     0x000000000001a540      0x8c0 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(accel_auto_cal.o)
                                         0xd18 (size before relaxing)
- .debug_str     0x000000000001adf4      0x364 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(compass_vec_cal.o)
+ .debug_str     0x000000000001ae00      0x364 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(compass_vec_cal.o)
                                         0xa76 (size before relaxing)
- .debug_str     0x000000000001b158      0x618 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(fast_no_motion.o)
+ .debug_str     0x000000000001b164      0x618 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(fast_no_motion.o)
                                         0xaee (size before relaxing)
- .debug_str     0x000000000001b770      0x2f9 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(fusion_9axis.o)
+ .debug_str     0x000000000001b77c      0x2f9 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(fusion_9axis.o)
                                         0x733 (size before relaxing)
- .debug_str     0x000000000001ba69      0x1f7 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(gyro_tc.o)
+ .debug_str     0x000000000001ba75      0x1f7 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(gyro_tc.o)
                                         0x5f2 (size before relaxing)
- .debug_str     0x000000000001bc60      0x169 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(heading_from_gyro.o)
+ .debug_str     0x000000000001bc6c      0x169 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(heading_from_gyro.o)
                                         0x5cd (size before relaxing)
- .debug_str     0x000000000001bdc9      0x321 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(mag_disturb.o)
+ .debug_str     0x000000000001bdd5      0x321 ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(mag_disturb.o)
                                         0x7fe (size before relaxing)
- .debug_str     0x000000000001c0ea      0x26a ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(quaternion_supervisor.o)
+ .debug_str     0x000000000001c0f6      0x26a ../../../libs/liblibmplmpu_m4_hardfp/liblibmplmpu.a(quaternion_supervisor.o)
                                         0x6b5 (size before relaxing)
- .debug_str     0x000000000001c354      0x16b ../../../external/sdk13/components/toolchain/cmsis/dsp/GCC/libarm_cortexM4lf_math.a(arm_sin_f32.o)
+ .debug_str     0x000000000001c360      0x16b ../../../external/sdk13/components/toolchain/cmsis/dsp/GCC/libarm_cortexM4lf_math.a(arm_sin_f32.o)
                                         0x242 (size before relaxing)
- .debug_str     0x000000000001c4bf      0x4f9 ../../../external/sdk13/components/toolchain/cmsis/dsp/GCC/libarm_cortexM4lf_math.a(arm_common_tables.o)
+ .debug_str     0x000000000001c4cb      0x4f9 ../../../external/sdk13/components/toolchain/cmsis/dsp/GCC/libarm_cortexM4lf_math.a(arm_common_tables.o)
                                         0x704 (size before relaxing)
- .debug_str     0x000000000001c9b8     0x6fa2 ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
+ .debug_str     0x000000000001c9c4     0x6fa2 ../../../external/sdk13/components/nfc/t2t_lib/nfc_t2t_lib_gcc.a(nfc_t2t_lib_nfc_t2t_lib.c.o)
                                        0x742b (size before relaxing)
 
 .debug_frame    0x0000000000000000    0x2345c

@@ -529,13 +529,14 @@ static void drv_motion_evt_handler(drv_motion_evt_t const * p_evt, void * p_data
             ble_tms_pedo_t  data;
             unsigned long * p_pedo = (unsigned long *)p_data;
 
-            data.steps   = p_pedo[0];
+            // data.steps   = p_pedo[0];
+            data.steps   = step_count;
             data.time_ms = p_pedo[1];
 
             NRF_LOG_DEBUG("DRV_MOTION_EVT_PEDOMETER: %d steps %d ms\r\n", p_pedo[0],
                                                                           p_pedo[1]);
 
-            (void)ble_tms_pedo_set(&m_tms, &data);
+            // (void)ble_tms_pedo_set(&m_tms, &data);
         }
         break;
 
@@ -609,7 +610,6 @@ uint32_t process_accel_data(double x, double y, double z, ble_tms_gravity_t* p_o
 {
     double mean_acc = 0;
     double normalized_accel = 0;
-    double no_ewma_normalized_accel = 0;
 
     char buffer[24];
 
@@ -629,7 +629,7 @@ uint32_t process_accel_data(double x, double y, double z, ble_tms_gravity_t* p_o
     //subtract mean from index zero -- this removes "DC" offset
     normalized_accel = mag_buffer[acc_index] - mean_acc;
 
-    no_ewma_normalized_accel = normalized_accel;
+    double norm_data = normalized_accel;
 
     //print out this normalized acceleration for debug
     // sprintf(buffer, "NORM_DATA %.2f", normalized_accel);
@@ -639,6 +639,8 @@ uint32_t process_accel_data(double x, double y, double z, ble_tms_gravity_t* p_o
     normalized_accel = normalized_accel*ewma_alpha + prev_ewma*(1 - ewma_alpha);
     sprintf(buffer, "EWMA_DATA %.2f", normalized_accel);
     NRF_LOG_INFO(" %s\r\n", buffer);
+
+    double ewma_data = normalized_accel;
 
     prev_ewma = normalized_accel;
     // LINK ----- switch to the step detection threshold thingy ---
@@ -679,8 +681,8 @@ uint32_t process_accel_data(double x, double y, double z, ble_tms_gravity_t* p_o
 
     if (p_output != NULL)
     {
-        p_output->x = no_ewma_normalized_accel*5;
-        p_output->y = normalized_accel * 5;
+        p_output->x = norm_data * 7;
+        p_output->y = ewma_data * 7;
         p_output->z = 18 * (normalized_accel > ACCEL_HYST) - 9;
     }
 
