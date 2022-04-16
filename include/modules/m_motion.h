@@ -54,6 +54,9 @@
 #include "m_ble.h"
 #include "nrf_drv_twi.h"
 
+#include "ble_tms.h"
+
+
 /**@brief Motion module default configuration.
  */
 #define MOTION_DEFAULT_CONFIG     \
@@ -90,7 +93,7 @@ uint32_t m_motion_sleep_prepare(bool wakeup);
 uint32_t m_motion_init(m_ble_service_handle_t * p_handle, m_motion_init_t * p_params);
 
 //added function prototype for step processing
-uint32_t process_accel_data(double x, double y, double z);
+uint32_t process_accel_data(double x, double y, double z, ble_tms_gravity_t* p_output);
 
 #endif
 

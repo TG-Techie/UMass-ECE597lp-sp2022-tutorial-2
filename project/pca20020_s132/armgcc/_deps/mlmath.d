@@ -1,2 +1,2 @@
 ./_debug/mlmath.o _release/mlmath.o: \
- /home/ece697lp/Nordic-Thingy52-FW-T2/libs/eMD6/core/mllite/mlmath.c
+ /Users/jonahym/Documents/college/597lp/tutorials/tut2/ECE697LP_Tutorial2/libs/eMD6/core/mllite/mlmath.c

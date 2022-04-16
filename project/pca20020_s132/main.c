@@ -225,7 +225,7 @@ static void m_batt_meas_handler(m_batt_meas_event_t const * p_batt_meas_event)
 
 
 /**@brief Function for handling BLE events.
- */
+ */ // LINK: handles even connections, disconnections, etc
 static void thingy_ble_evt_handler(m_ble_evt_t * p_evt)
 {
     switch (p_evt->evt_type)

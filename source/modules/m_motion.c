@@ -59,13 +59,13 @@ static const ble_tms_config_t m_default_config = MOTION_DEFAULT_CONFIG;
 
 //*****************Your Values from Tutorial 1 here**********************
 
-#define ACCEL_BUF_SIZE 5
-#define ACCEL_HYST 0.0F
+#define ACCEL_BUF_SIZE 10
+#define ACCEL_HYST 0.15
 
 double mag_buffer[ACCEL_BUF_SIZE];
 
 //Used for EWMA low pass filter
-double ewma_alpha = 0.5;
+double ewma_alpha = 0.8;
 //***********************************************************************
 
 
@@ -107,7 +107,7 @@ static void ble_tms_evt_handler(ble_tms_t        * p_tms,
                                 uint16_t           length)
 {
     uint32_t err_code;
-    
+    /* LINK: added, turn of the LOGGING*/ #define NRF_LOG_INFO(...)
     switch (evt_type)
     {
         case BLE_TMS_EVT_NOTIF_TAP:
@@ -158,7 +158,7 @@ static void ble_tms_evt_handler(ble_tms_t        * p_tms,
         case BLE_TMS_EVT_NOTIF_PEDOMETER:
             NRF_LOG_INFO("ble_tms_evt_handler: BLE_TMS_EVT_NOTIF_PEDOMETER - %d\r\n", p_tms->is_pedo_notif_enabled);
             if (p_tms->is_pedo_notif_enabled)
-            {
+            { // LINK: ble tms event handler
                 //err_code = drv_motion_enable(DRV_MOTION_FEATURE_MASK_PEDOMETER);
                 //APP_ERROR_CHECK(err_code);
 
@@ -325,6 +325,8 @@ static void motion_on_ble_evt(ble_evt_t * p_ble_evt)
 
 static void drv_motion_evt_handler(drv_motion_evt_t const * p_evt, void * p_data, uint32_t size)
 {
+    static ble_tms_gravity_t plot_data;
+
     switch (*p_evt)
     {
         case DRV_MOTION_EVT_RAW:
@@ -352,13 +354,16 @@ static void drv_motion_evt_handler(drv_motion_evt_t const * p_evt, void * p_data
             z_buf = (double)p_raw[2];
             z_buf = z_buf/(1<<16);
 
+
             //format as string for debugging purposes and print accelerometer values to segger RTT console channel 1
             // sprintf(buffer, "ACCEL_DATA %.2f,%.2f,%.2f", x_buf,y_buf,z_buf);
             // NRF_LOG_INFO(" %s\r\n", buffer);
 
-            process_accel_data(x_buf,y_buf,z_buf);
+            process_accel_data(x_buf,y_buf,z_buf, &plot_data);
 
             (void)ble_tms_raw_set(&m_tms, &data);
+
+            // ble_tms_gravity_set(&m_tms, &plot_data);
         }
         break;
 
@@ -486,7 +491,7 @@ static void drv_motion_evt_handler(drv_motion_evt_t const * p_evt, void * p_data
                                                                                    nrf_log_push(buffer[2]));
             #endif
 
-            (void)ble_tms_gravity_set(&m_tms, &data);
+            (void)ble_tms_gravity_set(&m_tms, &plot_data);
         }
         break;
 
@@ -600,10 +605,11 @@ uint32_t m_motion_init(m_ble_service_handle_t * p_handle, m_motion_init_t * p_pa
     return NRF_SUCCESS;
 }
 
-uint32_t process_accel_data(double x, double y, double z)
+uint32_t process_accel_data(double x, double y, double z, ble_tms_gravity_t* p_output)
 {
     double mean_acc = 0;
     double normalized_accel = 0;
+    double no_ewma_normalized_accel = 0;
 
     char buffer[24];
 
@@ -623,7 +629,7 @@ uint32_t process_accel_data(double x, double y, double z)
     //subtract mean from index zero -- this removes "DC" offset
     normalized_accel = mag_buffer[acc_index] - mean_acc;
 
-    
+    no_ewma_normalized_accel = normalized_accel;
 
     //print out this normalized acceleration for debug
     // sprintf(buffer, "NORM_DATA %.2f", normalized_accel);
@@ -635,8 +641,9 @@ uint32_t process_accel_data(double x, double y, double z)
     NRF_LOG_INFO(" %s\r\n", buffer);
 
     prev_ewma = normalized_accel;
-
+    // LINK ----- switch to the step detection threshold thingy ---
     //now, check for a zero crossing (negative to positive) and update history
+
 
     if(normalized_accel > ACCEL_HYST)
     {
@@ -670,8 +677,14 @@ uint32_t process_accel_data(double x, double y, double z)
       sign_state_pos = false;
     }
 
+    if (p_output != NULL)
+    {
+        p_output->x = no_ewma_normalized_accel*5;
+        p_output->y = normalized_accel * 5;
+        p_output->z = 18 * (normalized_accel > ACCEL_HYST) - 9;
+    }
 
-    //update undex of circular buffer
+    //update undex of circular buffer 
     acc_index++;
     if(acc_index == 99)
         acc_index = 0;
